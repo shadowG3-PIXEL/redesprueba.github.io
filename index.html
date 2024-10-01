@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de PC - Tu destino para componentes de alta gama</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Fondo gris muy claro */
+    color: #2c3e50; /* Color de texto oscuro */
+}
+
+.navbar {
+    background-color: #ffffff; /* Fondo blanco para la navbar */
+    color: #2c3e50; /* Color de texto oscuro */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre logo y opciones */
+    padding: 15px 30px;
+    height: 70px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.1);
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center; /* Centrar verticalmente las opciones */
+    padding: 0; /* Eliminar padding */
+}
+
+.navbar ul li {
+    position: relative;
+    margin-left: 20px; /* Espaciado entre los elementos del menú */
+}
+
+.navbar ul li a {
+    color: #2c3e50; /* Color de texto negro */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #87a2dd; /* Color verde brillante en hover */
+    transform: translateY(-3px);
+}
+
+/* Estilos para el dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff; /* Fondo blanco para el dropdown */
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.navbar ul li:hover .dropdown-content {
+    display: block; /* Mostrar el contenido del dropdown al pasar el mouse */
+}
+
+.dropdown-content a {
+    color: #2c3e50; /* Color de texto negro para el dropdown */
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(44, 62, 80, 0.1);
+}
+
+/* Estilos para el submenú */
+.submenu {
+    position: relative;
+}
+
+.submenu-content {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    left: 100%; /* Mostrar al lado derecho del elemento padre */
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.submenu:hover .submenu-content {
+    display: block; /* Mostrar el submenú al pasar el mouse */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content {
+    padding: 40px;
+    margin-top: 70px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1,
+h2 {
+    margin-bottom: 20px;
+    color: #2980b9; /* Color azul para los encabezados */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+h1 {
+    font-size: 3.5em; /* Tamaño más grande para el título principal */
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700; /* Negrita */
+}
+
+h2 {
+    font-size: 2.5em; /* Tamaño más grande para subtítulos */
+    border-bottom: 3px solid #2980b9; /* Borde azul */
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #555555; /* Color de texto gris */
+}
+
+.card {
+    background-color: #ecf0f1; /* Color gris claro para las tarjetas */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980b9; /* Color de botón azul */
+    color: #ffffff; /* Color de texto blanco en el botón */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #27ae60; /* Cambiar color de fondo del botón en hover */
+    color: #ffffff; /* Mantener el texto blanco */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+}
+
+/* Estilo adicional para el footer */
+footer {
+    background-color: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+.additional-images {
+    margin-top: 40px; /* Espacio superior */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 20px; /* Espacio entre imágenes */
+}
+
+.image-grid img {
+    width: 100%; /* Hacer que las imágenes ocupen todo el ancho de la columna */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.products-table a {
+    color: #000; /* Color negro para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.products-table a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse; /* Colapsar bordes */
+    margin: 20px 0; /* Espacio superior e inferior */
+    background-color: #f0f4f8; /* Fondo plomo */
+}
+
+.products-table th,
+.products-table td {
+    padding: 15px; /* Espaciado reducido */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.products-table th {
+    background-color: #f0f4f8; /* Color de fondo claro para los encabezados */
+    color: #111111; /* Color de texto oscuro para los encabezados */
+}
+
+.products-table tr {
+    background-color: #f0f4f8; /* Color uniforme para todas las filas */
+}
+
+.products-table td {
+    border: none; /* Eliminar borde de las celdas */
+}
+
+      
+        /* Estilos para la ruleta de imágenes */
+        .image-slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%; /* Mantener el ancho completo */
+    max-width: 1200px; /* Aumentar el ancho máximo a 1200px o el tamaño que prefieras */
+    height: 600px; /* Aumentar la altura a 600px o cualquier tamaño deseado */
+}
+
+
+.image-slider img {
+    width: 100%;
+    height: 100%; /* Asegúrate de que las imágenes llenen todo el contenedor */
+    display: none;
+    border-radius: 10px;
+    object-fit: cover; /* Mantener la proporción de la imagen */
+}
+
+.image-slider img.active {
+    display: block; /* Mostrar solo la imagen activa */
+}
+
+.image-slider .controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.image-slider .controls button {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.image-slider .controls button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.company-info {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0; /* Espacio arriba y abajo */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    animation: fadeIn 0.5s ease-in-out, slideIn 0.5s ease-in-out; /* Animaciones de entrada */
+}
+
+.company-info h2 {
+    font-family: 'Roboto', sans-serif; /* Tipografía moderna */
+    font-size: 4.5em; /* Tamaño grande para el encabezado */
+    color: #456f8b; /* Color azul vibrante para el encabezado */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el texto */
+}
+
+.company-info p {
+    font-family: 'Arial', sans-serif; /* Tipografía simple para el párrafo */
+    font-size: 1.2em; /* Tamaño del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="listo.jpg" alt="Logo de Tienda de PC">
+        </div>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li>
+                <a href="#">Productos</a>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <a href="#">Tarjetas Gráficas</a>
+                        <div class="submenu-content">
+                            <a href="#">NVIDIA</a>
+                            <a href="#">RTX</a>
+                        </div>
+                    </div>
+                    <a href="#">Procesadores</a>
+                    <a href="#">Memoria RAM</a>
+                </div>
+            </li>
+            <li>
+                <a href="#">Ofertas</a>
+                <div class="dropdown-content">
+                    <a href="#">Descuentos</a>
+                    <a href="#">Promociones</a>
+                </div>
+            </li>
+            <li><a href="#novedades">Novedades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <div class="content">
+        <div class="image-slider">
+            <img src="https://i.pinimg.com/originals/98/58/d9/9858d9207a3840de7ade0e3f41982e94.jpg" class="active" alt="Imagen 1">
+            <img src="https://www.guiahardware.es/wp-content/uploads/2021/06/Mejores-configuraciones-PC-Gamer-por-piezas-.webp" alt="Imagen 2">
+            <img src="https://images.unsplash.com/photo-1626218174358-7769486c4b79?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGMlMjBnYW1pbmd8ZW58MHx8MHx8fDA%3D" alt="Imagen 3">
+            <div class="controls">
+                <button id="prevBtn">❮</button>
+                <button id="nextBtn">❯</button>
+            </div>
+        </div>
+        
+        <div class="company-info">
+            <h2>InnovaCompuTech</h2>
+            <p>En nos especializamos en la venta de componentes y partes de PC de alta calidad. 
+               Ofrecemos desde tarjetas gráficas potentes hasta monitores de alta definición, asegurando que cada 
+               jugador y profesional tenga el equipo necesario para alcanzar su máximo potencial. 
+               ¡Conéctate con nosotros y potencia tu experiencia de juego!</p>
+        </div>
+        
+        <!-- Sección de imágenes adicionales -->
+        <div class="additional-images">
+            <div class="image-grid">
+                <img src="https://img.freepik.com/fotos-premium/memoria-ram-computadora-placa-base-circuito_150455-2898.jpg" alt="Imagen 4">
+                <img src="https://img.freepik.com/fotos-premium/tarjeta-grafica-juegos-computadora-tarjeta-video-dos-refrigeradores-placa-circuito_150455-1932.jpg" alt="Imagen 5">
+                <img src="https://c4.wallpaperflare.com/wallpaper/212/806/349/technology-amd-ryzen-hd-wallpaper-preview.jpg" alt="Imagen 6">
+                <img src="https://wallpapers.com/images/hd/rog-red-motherboard-32298awf6nugjela.jpg" alt="Imagen 7" width="500" height="310">
+
+            </div>
+        </div>
+        <!--tabla-->
+    <table class="products-table">
+        <tr>
+            <b>
+            <th>Comprar y mas informacion</th>
+            <th></th>
+            <th></th>
+            <th>Conoce mas</th>
+            <th>Soporte</th>
+            <th>Sobre nosotros</th></b>
+        </tr>
+        <tr>
+            <td><a href="enlace_a_producto_1.html">Desktop</a></td>
+            <td><a href="enlace_a_producto_1.html">monitores</a></td>
+            <td><a href="enlace_a_producto_1.html">minipc</a></td>
+            
+        </tr>
+        <tr>
+            <td><a href="enlace_a_producto_1.html">Desktop</a></td>
+            <td></td>
+            <td>Descripción 13</td>
+            <td>Descripción 13</td>
+            <td>Descripción 13</td>
+            <td><a href="enlace_a_producto_1.html">minipc</a></td>
+        </tr>
+        <tr>
+            <td><a href="enlace_a_producto_1.html">Desktop</a></td>
+            <td><a href="enlace_a_producto_1.html">monitores</a></td>
+            <td><a href="enlace_a_producto_1.html">minipc</a></td>
+        </tr>
+        <tr>
+            <td><a href="enlace_a_producto_1.html">Desktop</a></td>
+            <td><a href="enlace_a_producto_1.html">monitores</a></td>
+            <td><a href="enlace_a_producto_1.html">minipc</a></td>
+        </tr>
+    </table>
+    </div>
+    
+    
+    
+    <script>
+        const images = document.querySelectorAll('.image-slider img');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.remove('active');
+                if (i === index) {
+                    img.classList.add('active');
+                }
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', nextImage);
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        });
+
+        // Cambiar automáticamente la imagen cada 3 segundos
+        setInterval(nextImage, 3000);
+    </script>
+</body>
+</html>
