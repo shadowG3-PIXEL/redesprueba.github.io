@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovaciones en Tecnología de PC</title>
+    <link rel="stylesheet" href="cssprinci.css"> 
+    <link rel="stylesheet" href="cssformulario.css"> 
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="listo.jpg" alt="Logo de Tienda de PC">
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>  <!-- funcional  -->
+            <li>
+                <a href="#">Novedades</a>
+            </li>
+            <li>
+                <a href="#">Ranking</a>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <a href="#">Tarjetas Gráficas</a>
+                        <div class="submenu-content">
+                            <a href="#">NVIDIA</a>
+                            <a href="#">RTX</a>
+                        </div>
+                    </div>
+
+                    <div class="submenu">
+                        <a href="#">Procesadores</a>
+                        <div class="submenu-content">
+                            <a href="#">Intel</a>
+                            <a href="#">AMD</a>
+                        </div>
+                    <a href="#">Laptos</a>
+                </div>
+            </li>
+            <li><a href="#novedades">Arma tu pc</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    
+<div class="container">
+    <h1>Contacto</h1>
+    <p>Si tienes dudas, sugerencias o necesitas más información sobre tecnología de PC, completa el formulario y recibirás una respuesta en el menor tiempo posible.</p>
+    <form id="contact-form">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+
+        <label for="telefono">Teléfono (opcional):</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono">
+
+        <label for="tipo_consulta">Selecciona el Tipo de Consulta:</label>
+        <select id="tipo_consulta" name="tipo_consulta" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="soporte">Soporte Técnico</option>
+            <option value="informacion">Información General</option>
+            <option value="sugerencia">Sugerencia</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje" rows="6" required></textarea>
+
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+</div>
+    </div>  
+    <script src="script1.js"></script>   
+</body>
+</html> 

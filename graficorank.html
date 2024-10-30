@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovaciones en Tecnología de PC</title>
+    <link rel="stylesheet" href="cssprinci.css"> 
+    <link rel="stylesheet" href="graficorak.css"> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Inclusión de Chart.js -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="listo.jpg" alt="Logo de Tienda de PC">
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li> 
+            <li>
+                <a href="#">Novedades</a>
+            </li>
+            <li>
+                <a href="#">Ranking</a>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <a href="#">Tarjetas Gráficas</a>
+                        <div class="submenu-content">
+                            <a href="#">NVIDIA</a>
+                            <a href="#">RTX</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="#">Procesadores</a>
+                        <div class="submenu-content">
+                            <a href="#">Intel</a>
+                            <a href="#">AMD</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="#">Laptos</a>
+                        <div class="submenu-content">
+                            <a href="#">Gamers</a>
+                            <a href="#">Oficina</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="armapc.html">Arma tu pc</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="container">
+            <h1>Ranking de PCs</h1>
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="container">
+            <h1>Ranking de Gráficas</h1>
+            <canvas id="myChart1"></canvas>
+        </div>
+        <div class="container">
+            <h1>Ranking de Laptops</h1>
+            <canvas id="myChart2"></canvas>
+        </div>
+    </div>  
+    <script src="script1.js"></script>   
+    <script src="rankgraf.js"></script>  
+</body>
+</html>
