@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovaciones en Tecnología de PC</title>
+    <link rel="stylesheet" href="cssprinci.css"> 
+    <style>
+
+        .product-item img {
+    width: 200px; /* Ajusta según el tamaño que prefieras */
+    height:200px;
+    object-fit: cover; /* Recorta la imagen para llenar el área sin deformarla */
+    border-radius: 5px;
+}
+
+        .product-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Aumenta el espacio entre productos */
+            max-width: 1000px;
+            justify-content: center;
+        }
+        .product-item {
+            flex: 1 1 calc(25% - 20px); /* Ajuste para 4 productos por fila */
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+            max-width: calc(25% - 20px);
+        }
+        .product-item:hover {
+            transform: scale(1.05);
+        }
+        .product-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .modal {
+            display: none; /* Oculto inicialmente */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    width: 90%;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    justify-content: center; /* Centra horizontalmente los elementos en el modal */
+    align-items: center; /* Centra verticalmente los elementos en el modal */
+}
+
+.modal-content img {
+    width: 50%; /* Tamaño fijo deseado */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: none; /* Asegura que el ancho no se limite */
+    max-height: 70vh; /* Ajusta la altura máxima al 70% de la ventana del navegador */
+    border-radius: 5px; /* Mantiene el borde redondeado */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+        .modal-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="listo.jpg" alt="Logo de Tienda de PC">
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>  <!-- funcional  -->
+            <li>
+                <a href="novedades.html">Novedades</a>
+            </li>
+            <li>
+                <a href="#">Ranking</a>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <a href="meme.html">Tarjetas Gráficas</a>
+                        <div class="submenu-content">
+                            <a href="meme.html">NVIDIA</a>
+                            <a href="meme.html">RTX</a>
+                        </div>
+                    </div>
+
+                    <div class="submenu">
+                        <a href="meme.html">Procesadores</a>
+                        <div class="submenu-content">
+                            <a href="meme.html">Intel</a>
+                            <a href="meme.html">AMD</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="meme.html">Laptos</a>
+                        <div class="submenu-content">
+                            <a href="meme.html">Gamers</a>
+                            <a href="meme.html">Oficina</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="armapc.html">Arma tu pc</a></li>
+            <li><a href="meme.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="product-gallery">
+            <!-- Primera fila de productos -->
+            <div class="product-item" onclick="showModal('Procesador CORE I5', 'Impulsa el rendimiento de tu PC con este procesador de última generación. Ideal para tareas intensivas como gaming, edición de video y diseño gráfico, ofrece múltiples núcleos, velocidad turbo y eficiencia energética avanzada. Compatible con las últimas placas base, es la elección perfecta para quienes buscan velocidad y estabilidad en cada tarea.', 'https://symcomputadores.com/wp-content/uploads/2022/09/procesador.jpg')">
+                <img src="https://symcomputadores.com/wp-content/uploads/2022/09/procesador.jpg" alt="Procesador de Alto Rendimiento">
+                <h3>Procesador CORE i5</h3>
+            </div>    
+            <div class="product-item" onclick="showModal('Procesador CORE i9', 'Descripción del producto 2.', 'https://www.ofimax.net/imgs/productos/_original_108153.jpg')">
+                <img src="https://www.ofimax.net/imgs/productos/_original_108153.jpg" alt="Producto 2">
+                <h3>Procesador CORE i9</h3>
+            </div>
+            <div class="product-item" onclick="showModal('Procesador RYZEN 9', 'Descripción del producto 3.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFUEZcIJ7S198FEhOz7z0kYWmLnJo72ksVL28Wh_4rrnRUsiniHrAH4rIMpNqTSGTxYcY&usqp=CAU')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFUEZcIJ7S198FEhOz7z0kYWmLnJo72ksVL28Wh_4rrnRUsiniHrAH4rIMpNqTSGTxYcY&usqp=CAU" alt="Producto 3">
+                <h3>Procesador RYZEN 9</h3>
+            </div>
+            <div class="product-item" onclick="showModal('Procesador RYZEN 7', 'Descripción del producto 4.', 'https://www.infotec.com.pe/41432-large_default/procesador-amd-ryzen-7-5800x-38ghz-36mb-100-100000063wof-am4.jpg')">
+                <img src="https://www.infotec.com.pe/41432-large_default/procesador-amd-ryzen-7-5800x-38ghz-36mb-100-100000063wof-am4.jpg" alt="Producto 4">
+                <h3>Procesador RYZEN 7</h3>
+            </div>
+        
+            <!-- tarjetas graficas  -->
+            <div class="product-item" onclick="showModal('GeForce RTX 4090', 'Descripción del producto 5.', 'https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/Items/912-V510-400_800.jpg')">
+                <img src="https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/Items/912-V510-400_800.jpg" alt="Producto 5">
+                <h3>GeForce RTX 4090</h3>
+            </div>
+            <div class="product-item" onclick="showModal('GeForce RTX 4080', 'Descripción del producto 6.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjEWmfwPEb-ZQQOuXJbmh-zEnSt1lm3pW00Q&s')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjEWmfwPEb-ZQQOuXJbmh-zEnSt1lm3pW00Q&s" alt="Producto 6">
+                <h3>GeForce RTX 4080</h3>
+            </div>
+            <div class="product-item" onclick="showModal('Radeon RX 7900 XTX', 'Descripción del producto 7.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnwgo_0Fu7oce4exp_MtAICbx7Sl0dGU0-w&s')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnwgo_0Fu7oce4exp_MtAICbx7Sl0dGU0-w&s" alt="Producto 7">
+                <h3>Radeon RX 7900 XTX</h3>
+            </div>
+            <div class="product-item" onclick="showModal('Radeon RX 7900 XT', 'Descripción del producto 8.', 'https://www.unicom.com.uy/WS/Fotos_WEB/Articulos/VARX7900XT/1200x1200_1.JPG')">
+                <img src="https://www.unicom.com.uy/WS/Fotos_WEB/Articulos/VARX7900XT/1200x1200_1.JPG" alt="Producto 8">
+                <h3>Radeon RX 7900 XT</h3>
+            </div>
+                <!-- tarjetas graficas  -->
+            <div class="product-item" onclick="showModal('ASUS ROG Crosshair X670E Hero (AMD)', 'Descripción del producto 5.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn2JEELh9I6yUiGPu_GEViQVqtwFaxctoLPg&s')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn2JEELh9I6yUiGPu_GEViQVqtwFaxctoLPg&s" alt="Producto 5">
+                <h3>ASUS ROG Crosshair X670E Hero (AMD)</h3>
+            </div>
+            <div class="product-item" onclick="showModal('AORUS Master X670E (AMD)', 'Descripción del producto 6.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUWVcfnMX00yppJY3UK4vh8izgZV8kSWyFNg&s')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUWVcfnMX00yppJY3UK4vh8izgZV8kSWyFNg&s" alt="Producto 6">
+                <h3>AORUS Master X670E (AMD)</h3>
+            </div>
+            <div class="product-item" onclick="showModal('ASRock (Intel)', 'Descripción del producto 7.', 'https://cdna.pcpartpicker.com/static/forever/images/product/9e1eb50ed97ad182aa5c4d460b820a3e.1600.jpg')">
+                <img src="https://cdna.pcpartpicker.com/static/forever/images/product/9e1eb50ed97ad182aa5c4d460b820a3e.1600.jpg" alt="Producto 7">
+                <h3>ASRock (Intel)</h3>
+            </div>
+            <div class="product-item" onclick="showModal('PMSI MEG Z790 GODLIKE', 'Descripción del producto 8.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnWqmEpgjAXFkwJc7gj50ra6QFFqcuOPJeTQ&s')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnWqmEpgjAXFkwJc7gj50ra6QFFqcuOPJeTQ&s" alt="Producto 8">
+                <h3>PMSI MEG Z790 GODLIKE</h3>
+            </div>
+        </div>
+        
+        <!-- Modal para mostrar los detalles del producto -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <img id="modal-image" src="" alt="Imagen del producto">
+                <div class="modal-details">
+                    <h2 id="modal-title">Título del producto</h2>
+                    <p id="modal-description">Descripción del producto</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>  
+    <script src="script1.js"></script>   
+    <script>
+       function showModal(title, description, image) {
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-description').textContent = description;
+    document.getElementById('modal-image').src = image;
+    document.getElementById('modal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+
+// Agregar evento para cerrar al hacer clic fuera del modal
+window.addEventListener('click', function(event) {
+    const modal = document.getElementById('modal');
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+    </script>
+</body>
+</html> 

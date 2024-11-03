@@ -6,6 +6,7 @@
     <title>Innovaciones en Tecnología de PC</title>
     <link rel="stylesheet" href="cssprinci.css"> 
     <link rel="stylesheet" href="cssformulario.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
     <nav class="navbar">
@@ -13,64 +14,101 @@
             <img src="listo.jpg" alt="Logo de Tienda de PC">
         </div>
         <ul>
-            <li><a href="index.html">Inicio</a></li>  <!-- funcional  -->
-            <li>
-                <a href="#">Novedades</a>
-            </li>
-            <li>
-                <a href="#">Ranking</a>
-                <div class="dropdown-content">
-                    <div class="submenu">
-                        <a href="#">Tarjetas Gráficas</a>
-                        <div class="submenu-content">
-                            <a href="#">NVIDIA</a>
-                            <a href="#">RTX</a>
-                        </div>
-                    </div>
-
-                    <div class="submenu">
-                        <a href="#">Procesadores</a>
-                        <div class="submenu-content">
-                            <a href="#">Intel</a>
-                            <a href="#">AMD</a>
-                        </div>
-                    <a href="#">Laptos</a>
-                </div>
-            </li>
+            <li><a href="index.html">Inicio</a></li>  
+            <li><a href="novedades.html">Novedades</a></li>
+            <li><a href="#">Ranking</a></li>
             <li><a href="#novedades">Arma tu pc</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
     
-<div class="container">
-    <h1>Contacto</h1>
-    <p>Si tienes dudas, sugerencias o necesitas más información sobre tecnología de PC, completa el formulario y recibirás una respuesta en el menor tiempo posible.</p>
-    <form id="contact-form">
-        <label for="nombre">Nombre Completo:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+    <div class="container">
+        <h1>Contacto</h1>
+        <p>Si tienes dudas, sugerencias o necesitas más información sobre tecnología de PC, completa el formulario y recibirás una respuesta en el menor tiempo posible.</p>
+        
+        <form id="contact-form" method="POST" onsubmit="mostrarConfirmacion(event)">
+            <label for="nombre">Nombres:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tus nombres" required>
 
-        <label for="correo">Correo Electrónico:</label>
-        <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
+            <label for="apellidop">Apellido Paterno:</label>
+            <input type="text" id="apellidop" name="apellidop" placeholder="Apellido paterno" required>
 
-        <label for="telefono">Teléfono (opcional):</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono">
+            <label for="apellidom">Apellido Materno:</label>
+            <input type="text" id="apellidom" name="apellidom" placeholder="Apellido materno" required>
 
-        <label for="tipo_consulta">Selecciona el Tipo de Consulta:</label>
-        <select id="tipo_consulta" name="tipo_consulta" required>
-            <option value="" disabled selected>Selecciona una opción</option>
-            <option value="soporte">Soporte Técnico</option>
-            <option value="informacion">Información General</option>
-            <option value="sugerencia">Sugerencia</option>
-            <option value="otro">Otro</option>
-        </select>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
 
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje" rows="6" required></textarea>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono">
 
-        <button type="submit">Enviar Mensaje</button>
-    </form>
-</div>
-    </div>  
-    <script src="script1.js"></script>   
+            <label for="tipo_consulta">Selecciona el Tipo de Consulta:</label>
+            <select id="tipo_consulta" name="tipo_consulta" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="soporte">Soporte Técnico</option>
+                <option value="informacion">Información General</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje" rows="6" required></textarea>
+
+            <button type="submit" action="guardar_consulta.php">Enviar Mensaje</button>
+        </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function mostrarConfirmacion(event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+            console.log("Formulario enviado"); // Mensaje de depuración
+        
+            // Envía el formulario de forma manual con AJAX
+            const form = document.getElementById('contact-form');
+            const formData = new FormData(form);
+        
+            fetch('guardar_consulta.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(result => {
+                console.log(result); // Verifica la respuesta del servidor
+                // Si el resultado indica un error, mostrar un mensaje de error
+                if (result.includes("Error") || result.includes("fallado") || result.includes("debe ser completado")) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: result, // Muestra el mensaje de error devuelto por el servidor
+                        confirmButtonText: 'Cerrar'
+                    });
+                } else {
+                    // Muestra un modal de confirmación con SweetAlert2
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Mensaje enviado correctamente',
+                        text: 'Serás redirigido al inicio en unos momentos...',
+                        showConfirmButton: false,
+                        timer: 5000,
+                        willClose: () => {
+                            window.location.href = 'index.html'; // Cambia 'index.html' a la página de inicio deseada
+                        }
+                    });
+                }
+            })
+            .catch(error => {
+                console.error('Error al enviar el formulario:', error);
+                // Muestra un mensaje de error en caso de que la solicitud falle
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'No se pudo enviar el formulario. Intenta de nuevo más tarde.',
+                    confirmButtonText: 'Cerrar'
+                });
+            });
+        }
+        </script>
+        
 </body>
-</html> 
+</html>
