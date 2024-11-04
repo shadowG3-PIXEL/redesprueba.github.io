@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Blog de Tecnología PC</title>
+    <link rel="stylesheet" href="cssprinci.css"> 
+    <style>
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .big-logo {
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    animation: float 2s infinite; /* Aplica la animación de forma infinita */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0); /* Comienza en la posición original */
+    }
+    50% {
+        transform: translateY(-10px); /* Flota hacia arriba */
+    }
+}
+        .contact-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .blog-features {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .contact-card h2, .blog-features h2 {
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #fff;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-links a {
+            margin: 10px;
+            font-size: 24px;
+            color: #007bff;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            font-size: 24px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="listo.jpg" alt="Logo de Tienda de PC" style="width: 50px; height: auto;">
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="novedades.html">Novedades</a></li>
+            <li>
+                <a href="welcometop.html">Ranking</a>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <a href="#">Procesadores</a>
+                        <div class="submenu-content">
+                            <a href="topin.html">Intel</a>
+                            <a href="topamd.html">AMD</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="#">Tarjetas Gráficas</a>
+                        <div class="submenu-content">
+                            <a href="topnvidia.html">NVIDIA</a>
+                            <a href="topradeon.html">RADEON</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="#">Laptos</a>
+                        <div class="submenu-content">
+                            <a href="toplaptopgamer.html">Gamers</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="armapc.html">Arma tu pc</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="contact-container">
+            <img src="listo2.png" alt="Logo del Blog" class="big-logo">
+            
+            <div class="contact-card">
+                <h2>Contacto Editorial</h2>
+                <p><strong>Email Principal:</strong> editor@tublog.com</p>
+                <p><strong>Email para Noticias:</strong> noticias@tublog.com</p>
+                <p><strong>Email para Reviews:</strong> reviews@tublog.com</p>
+                <p><strong>Tiempo de Respuesta:</strong> 24-48 horas</p>
+                <h2>Redes y Comunidad</h2>
+                <p><strong>Discord:</strong> discord.gg/tublog</p>
+                <p><strong>Telegram:</strong> t.me/tublog</p>
+                <p><strong>YouTube:</strong> youtube.com/@tublog</p>
+                <p><strong>Twitch:</strong> twitch.tv/tublog</p>
+            </div>
+
+            <div class="blog-features">
+                <h2>Lo Que Encontrarás en Nuestro Blog</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Reviews Detalladas</h3>
+                        <p>Análisis profundos de los últimos componentes y periféricos para PC</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Benchmarks</h3>
+                        <p>Pruebas de rendimiento y comparativas entre diferentes componentes</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Noticias Tech</h3>
+                        <p>Las últimas novedades del mundo de la tecnología y hardware</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <h2>Síguenos en Redes Sociales</h2>
+                <div class="social-icons">
+                    <a href="#" title="YouTube">📹</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Discord">💬</a>
+                    <a href="#" title="Telegram">📱</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

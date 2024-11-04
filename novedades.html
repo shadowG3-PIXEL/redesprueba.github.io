@@ -5,40 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovaciones en Tecnología de PC</title>
     <link rel="stylesheet" href="cssprinci.css"> 
+    <style>
+        /* Estilo para el modal */
+        .modal {
+            display: none; /* Oculto por defecto */
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 600px;
+            border-radius: 8px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal img {
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 8px;
+        }
+        .button {
+    background-color: #4CAF50; /* Verde */
+    border: none; /* Sin borde */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Bloque en línea */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 4px 2px; /* Margen */
+    cursor: pointer; /* Puntero de mano al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+.button:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="listo.jpg" alt="Logo de Tienda de PC">
+            <a href="index.html">
+                <img src="listo.jpg" alt="Logo de Tienda de PC">
+            </a>
         </div>
+        
         <ul>
-            <li><a href="index.html">Inicio</a></li>  <!-- funcional  -->
-            <li>
-                <a href="novedades.html">Novedades</a>
-            </li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="novedades.html">Novedades</a></li>
             <li>
                 <a href="welcometop.html">Ranking</a>
                 <div class="dropdown-content">
                     <div class="submenu">
-                        <a href="meme.html">Tarjetas Gráficas</a>
+                        <a href="#">Procesadores</a>
                         <div class="submenu-content">
-                            <a href="meme.html">NVIDIA</a>
-                            <a href="meme.html">RTX</a>
-                        </div>
-                    </div>
-
-                    <div class="submenu">
-                        <a href="meme.html">Procesadores</a>
-                        <div class="submenu-content">
-                            <a href="meme.html">Intel</a>
-                            <a href="meme.html">AMD</a>
+                            <a href="topintel.html">Intel</a>
+                            <a href="topamd.html">AMD</a>
                         </div>
                     </div>
                     <div class="submenu">
-                        <a href="meme.html">Laptos</a>
+                        <a href="#">Tarjetas Gráficas</a>
                         <div class="submenu-content">
-                            <a href="meme.html">Gamers</a>
-                            <a href="meme.html">Oficina</a>
+                            <a href="topnvidia.html">NVIDIA</a>
+                            <a href="topradeon.html">RADEON</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a href="#">Laptos</a>
+                        <div class="submenu-content">
+                            <a href="toplaptopgamer.html">Gamers</a>
                         </div>
                     </div>
                 </div>
@@ -48,9 +112,129 @@
         </ul>
     </nav>
     <div class="content">
+        <h1>Novedades en Tecnología de PC</h1>
+        <p>Bienvenido a nuestra sección de Novedades, donde te mantenemos al día con los últimos lanzamientos y avances en el mundo de la tecnología de PC. Aquí encontrarás reseñas de productos, artículos interesantes y consejos para mejorar tu experiencia informática.</p>
+    
+        <h2>Últimos Lanzamientos</h2>
+        <div class="novedades-grid">
+            <div class="novedad-card">
+                <img src="IR/novedades/nueva-tarjeta-grafica.jpg" alt="Nueva Tarjeta Gráfica" />
+                <h3>Nueva NVIDIA GeForce RTX 4090</h3>
+                <p>La última tarjeta gráfica de NVIDIA, diseñada para gamers y creadores de contenido. Con un rendimiento sin igual y ray tracing en tiempo real.</p>
+                <button class="button" onclick="openModal('modal-rtx4090')">Leer más</button>
+            </div>
+    
+            <div class="novedad-card">
+                <img src="IR/novedades/nuevo-procesador.jpg" alt="Nuevo Procesador" />
+                <h3>AMD Ryzen 7000 Series</h3>
+                <p>Los nuevos procesadores de AMD ofrecen un salto en rendimiento y eficiencia energética. Ideales para juegos y aplicaciones de alto rendimiento.</p>
+                <button class="button" onclick="openModal('modal-ryzen7000')">Leer más</button>
+            </div>
+    
+            <div class="novedad-card">
+                <img src="IR/novedades/nueva-placa-base.jpg" alt="Nueva Placa Base" />
+                <h3>Placa Base ASUS ROG Strix Z690</h3>
+                <p>Construida para gamers, esta placa base ofrece overclocking de alta calidad y conectividad avanzada para tus componentes.</p>
+                <button class="button" onclick="openModal('modal-z690')">Leer más</button>
+            </div>
+        </div>
+    
+        <h2>Artículos Destacados</h2>
+        <div class="articulos-grid">
+            <article class="articulo-card">
+                <h3>Cómo Elegir la Tarjeta Gráfica Ideal</h3>
+                <p>Aprende a seleccionar la tarjeta gráfica que mejor se adapte a tus necesidades y presupuesto. Desde el gaming hasta el diseño gráfico, ¡te lo contamos todo!</p>
+                <button class="button" onclick="openModal('modal-elegir-tg')">Leer más</button>
+            </article>
+    
+            <article class="articulo-card">
+                <h3>Tendencias en Refrigeración para PC</h3>
+                <p>Descubre las últimas tendencias en sistemas de refrigeración y cómo pueden mejorar el rendimiento de tu PC.</p>
+                <button class="button" onclick="openModal('modal-tendencias-refrigeracion')">Leer más</button>
+            </article>
+    
+            <article class="articulo-card">
+                <h3>5 Consejos para Optimizar tu PC</h3>
+                <p>Conoce algunos consejos prácticos para mejorar la velocidad y rendimiento de tu computadora. ¡No te los pierdas!</p>
+                <button class="button" onclick="openModal('modal-consejos')">Leer más</button>
+            </article>
+        </div>
         
-        
+        <!-- Modals -->
+        <div id="modal-rtx4090" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-rtx4090')">&times;</span>
+                <h2>Nueva NVIDIA GeForce RTX 4090</h2>
+                <img src="IR/novedades/nueva-tarjeta-grafica.jpg" alt="Nueva Tarjeta Gráfica" />
+                <p>La última tarjeta gráfica de NVIDIA, diseñada para gamers y creadores de contenido. Con un rendimiento sin igual y ray tracing en tiempo real.</p>
+            </div>
+        </div>
+
+        <div id="modal-ryzen7000" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-ryzen7000')">&times;</span>
+                <h2>AMD Ryzen 7000 Series</h2>
+                <img src="IR/novedades/nuevo-procesador.jpg" alt="Nuevo Procesador" />
+                <p>Los nuevos procesadores de AMD ofrecen un salto en rendimiento y eficiencia energética. Ideales para juegos y aplicaciones de alto rendimiento.</p>
+            </div>
+        </div>
+
+        <div id="modal-z690" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-z690')">&times;</span>
+                <h2>Placa Base ASUS ROG Strix Z690</h2>
+                <img src="IR/novedades/nueva-placa-base.jpg" alt="Nueva Placa Base" />
+                <p>Construida para gamers, esta placa base ofrece overclocking de alta calidad y conectividad avanzada para tus componentes.</p>
+            </div>
+        </div>
+
+        <div id="modal-elegir-tg" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-elegir-tg')">&times;</span>
+                <h2>Cómo Elegir la Tarjeta Gráfica Ideal</h2>
+                <img src="IR/articulos/como-elegir-tg.jpg" alt="Cómo Elegir la Tarjeta Gráfica" />
+                <p>Aprende a seleccionar la tarjeta gráfica que mejor se adapte a tus necesidades y presupuesto. Desde el gaming hasta el diseño gráfico, ¡te lo contamos todo!</p>
+            </div>
+        </div>
+
+        <div id="modal-tendencias-refrigeracion" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-tendencias-refrigeracion')">&times;</span>
+                <h2>Tendencias en Refrigeración para PC</h2>
+                <img src="IR/articulos/tendencias-refrigeracion.jpg" alt="Tendencias en Refrigeración" />
+                <p>Descubre las últimas tendencias en sistemas de refrigeración y cómo pueden mejorar el rendimiento de tu PC.</p>
+            </div>
+        </div>
+
+        <div id="modal-consejos" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-consejos')">&times;</span>
+                <h2>5 Consejos para Optimizar tu PC</h2>
+                <img src="IR/articulos/consejos-optimizar-pc.jpg" alt="Consejos para Optimizar tu PC" />
+                <p>Conoce algunos consejos prácticos para mejorar la velocidad y rendimiento de tu computadora. ¡No te los pierdas!</p>
+            </div>
+        </div>
     </div>  
-    <script src="script1.js"></script>   
+    <script src="script1.js"></script>
+    <script>
+        // Funciones para abrir y cerrar el modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Cerrar el modal si se hace clic fuera de él
+        window.onclick = function(event) {
+            const modals = document.getElementsByClassName("modal");
+            for (let i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </body>
-</html> 
+</html>

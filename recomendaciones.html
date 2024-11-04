@@ -5,6 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovaciones en Tecnología de PC</title>
     <link rel="stylesheet" href="cssprinci.css"> 
+    <style>
+        /* Estilo para la cuadrícula de videos */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Tres columnas de igual ancho */
+            gap: 20px; /* Espacio entre los videos */
+            margin-top: 20px; /* Margen superior */
+        }
+        
+        .video-container {
+            text-align: center; /* Centrar texto y videos */
+            background-color: #f9f9f9; /* Fondo para el contenedor de videos */
+            border: 1px solid #ddd; /* Borde alrededor del video */
+            border-radius: 8px; /* Esquinas redondeadas */
+            padding: 10px; /* Espacio interno */
+            transition: transform 0.2s; /* Efecto de transición */
+        }
+        
+        .video-container:hover {
+            transform: scale(1.05); /* Aumenta el tamaño al pasar el ratón */
+        }
+        
+        .video-container iframe {
+            width: 100%; /* Ajustar el ancho al 100% del contenedor */
+            height: 200px; /* Altura fija para todos los videos */
+            border-radius: 8px; /* Esquinas redondeadas para el iframe */
+        }
+        
+        /* Estilo para la cuadrícula de consejos */
+        .consejos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Tarjetas responsivas */
+            gap: 20px; /* Espacio entre tarjetas */
+            margin-top: 20px; /* Margen superior */
+        }
+    
+        .consejo-card {
+            background-color: #f9f9f9; /* Fondo de la tarjeta */
+            border: 1px solid #ddd; /* Borde de la tarjeta */
+            border-radius: 8px; /* Esquinas redondeadas */
+            padding: 15px; /* Espacio interno */
+            text-align: center; /* Centrar texto e imagen */
+            transition: transform 0.2s; /* Efecto de transición */
+        }
+    
+        .consejo-card:hover {
+            transform: scale(1.05); /* Aumenta el tamaño al pasar el ratón */
+        }
+    
+        .consejo-card img {
+            width: 100px; /* Ajustar el tamaño del icono */
+            height: 100px; /* Ajustar el tamaño del icono */
+            margin-bottom: 10px; /* Espacio debajo de la imagen */
+        }
+    
+        .consejo-card h3 {
+            color: #333; /* Color del título */
+        }
+    
+        .consejo-card p {
+            color: #555; /* Color del texto */
+            font-size: 0.9em; /* Tamaño de fuente más pequeño para mejor legibilidad */
+        }
+    </style>
+    
 </head>
 <body>
     <nav class="navbar">
@@ -12,33 +77,30 @@
             <img src="listo.jpg" alt="Logo de Tienda de PC">
         </div>
         <ul>
-            <li><a href="index.html">Inicio</a></li>  <!-- funcional  -->
+            <li><a href="index.html">Inicio</a></li>  
+            <li><a href="novedades.html">Novedades</a></li>
             <li>
-                <a href="novedades.html">Novedades</a>
-            </li>
-            <li>
-                <a href="#">Ranking</a>
+                <a href="welcometop.html">Ranking</a>
                 <div class="dropdown-content">
                     <div class="submenu">
-                        <a href="meme.html">Tarjetas Gráficas</a>
+                        <a href="#">Procesadores</a>
                         <div class="submenu-content">
-                            <a href="meme.html">NVIDIA</a>
-                            <a href="meme.html">RTX</a>
+                            <a href="topintel.html">Intel</a>
+                            <a href="topamd.html">AMD</a>
                         </div>
                     </div>
 
                     <div class="submenu">
-                        <a href="meme.html">Procesadores</a>
+                        <a href="#">Tarjetas Gráficas</a>
                         <div class="submenu-content">
-                            <a href="meme.html">Intel</a>
-                            <a href="meme.html">AMD</a>
+                            <a href="topnvidia.html">NVIDIA</a>
+                            <a href="topradeon.html">RADEON</a>
                         </div>
                     </div>
                     <div class="submenu">
-                        <a href="meme.html">Laptos</a>
+                        <a href="#">Laptos</a>
                         <div class="submenu-content">
-                            <a href="meme.html">Gamers</a>
-                            <a href="meme.html">Oficina</a>
+                            <a href="toplaptopgamer.html">Gamers</a>
                         </div>
                     </div>
                 </div>
@@ -48,9 +110,93 @@
         </ul>
     </nav>
     <div class="content">
+        <h1>Tutoriales y Consejos</h1>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO1" frameborder="0" allowfullscreen></iframe>
+            <p>Video de cabezera Descripción breve del tutorial.</p>
+        </div>
+        <section id="tutoriales">
+            <h2>Videos de Tutoriales</h2>
+            <div class="video-grid">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO1" frameborder="0" allowfullscreen></iframe>
+                    <p>Título del Tutorial 1: Descripción breve del tutorial.</p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO2" frameborder="0" allowfullscreen></iframe>
+                    <p>Título del Tutorial 2: Descripción breve del tutorial.</p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO3" frameborder="0" allowfullscreen></iframe>
+                    <p>Título del Tutorial 3: Descripción breve del tutorial.</p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO4" frameborder="0" allowfullscreen></iframe>
+                    <p>Título del Tutorial 4: Descripción breve del tutorial.</p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO5" frameborder="0" allowfullscreen></iframe>
+                    <p>Título del Tutorial 5: Descripción breve del tutorial.</p>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO6" frameborder="0" allowfullscreen></iframe>
+                    <p>Título del Tutorial 6: Descripción breve del tutorial.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="consejos">
+            <h2>Consejos Útiles</h2>
+            <div class="consejos-grid">
+                <div class="consejo-card">
+                    <img src="https://i.pinimg.com/originals/6b/57/87/6b5787ff3501f9a45afdade14b9d48bd.gif" alt="Icono de compatibilidad">
+                    <h3>Compatibilidad de Componentes</h3>
+                    <p>Asegúrate de que todos los componentes de tu PC sean compatibles. Revisa las especificaciones del procesador, placa madre y memoria RAM antes de comprar.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://i.pinimg.com/originals/42/52/0d/42520d2f08e9b118411cb75088f2d3c7.gif" alt="Icono de limpieza">
+                    <h3>Limpieza Regular</h3>
+                    <p>Realiza limpieza periódica de tu PC para evitar el sobrecalentamiento. Usa aire comprimido para eliminar el polvo de los ventiladores y componentes internos.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://media.tenor.com/LP3_16MOZgMAAAAM/i-wait-and-then-error-i-do-this-error.gif" alt="Icono de mantenimiento">
+                    <h3>Mantenimiento del Software</h3>
+                    <p>Mantén tu sistema operativo y drivers actualizados para asegurar el mejor rendimiento y seguridad. Usa un software antivirus confiable para proteger tu PC.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://i.pinimg.com/originals/cd/83/0b/cd830b9a77ac95a80bb6ba2a8a8da6ce.gif" alt="Icono de actualización">
+                    <h3>Actualiza Tu Hardware</h3>
+                    <p>Considera actualizar componentes como RAM o almacenamiento si notas que tu PC está lento. Esto puede ser una solución más económica que comprar una nueva computadora.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://media.tenor.com/PpGie5juDlkAAAAM/dani-milkman.gif" alt="Icono de fuente de alimentación">
+                    <h3>Elige una Fuente de Alimentación de Calidad</h3>
+                    <p>La fuente de alimentación es crucial para la estabilidad de tu PC. Asegúrate de que sea de una marca confiable y con suficiente potencia para soportar todos tus componentes.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://media.tenor.com/pTQd7bfDUngAAAAM/how-to-build-a-pc.gif" alt="Icono de cableado">
+                    <h3>Organiza el Cableado</h3>
+                    <p>Un buen manejo del cableado no solo mejora la estética, sino que también ayuda en el flujo de aire y facilita el mantenimiento futuro. Usa bridas para cables para mantener todo en su lugar.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://media.tenor.com/5y9JU0kfzf8AAAAM/how-to-basic-how-to-basic-internet-connexion.gif" alt="Icono de ensamble">
+                    <h3>Arma Tu PC con Paciencia</h3>
+                    <p>Construir una PC puede ser complicado, pero no te apresures. Tómate tu tiempo, revisa cada paso y no dudes en buscar ayuda si te sientes atascado.</p>
+                </div>
+                <div class="consejo-card">
+                    <img src="https://media.tenor.com/ZGkP4yh0Q_0AAAAj/bugcat-bugcatsticker.gif" alt="Icono de solución de problemas">
+                    <h3>Aprende a Solucionar Problemas</h3>
+                    <p>Si algo no funciona como se espera, no te desesperes. Investiga y aprende sobre los problemas comunes de hardware y software. Esto te ayudará a manejar cualquier inconveniente.</p>
+                </div>
+            </div>
+        </section>
+        
+            
+            
+        </section>
         
         
     </div>  
     <script src="script1.js"></script>   
 </body>
-</html> 
+</html>

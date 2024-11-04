@@ -5,19 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovaciones en Tecnología de PC</title>
     <link rel="stylesheet" href="cssprinci.css"> 
-    <style>
-        .video-container {
-            display: flex;
-            flex-direction: column; /* Para apilar los videos verticalmente */
-            align-items: center; /* Centrar horizontalmente */
-            justify-content: center; /* Centrar verticalmente */
-            margin: 20px; /* Espacio alrededor del contenedor */
-        }
-
-        .video-container iframe {
-            margin-bottom: 20px; /* Espacio entre videos */
-        }
-    </style>
+    <link rel="stylesheet" href="rank.css"> 
 </head>
 <body>
     <nav class="navbar">
@@ -25,8 +13,10 @@
             <img src="listo.jpg" alt="Logo de Tienda de PC">
         </div>
         <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="novedades.html">Novedades</a></li>
+            <li><a href="index.html">Inicio</a></li>  <!-- funcional  -->
+            <li>
+                <a href="novedades.html">Novedades</a>
+            </li>
             <li>
                 <a href="welcometop.html">Ranking</a>
                 <div class="dropdown-content">
@@ -54,17 +44,38 @@
                 </div>
             </li>
             <li><a href="armapc.html">Arma tu pc</a></li>
-            <li><a href="meme.html">Contacto</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
     <div class="content">
-        <h2>Recomendaciones de Componentes</h2>
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/9Ws7SwFjksU?si=Ng7wcsLVo8YfRIGG" frameborder="0" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID2" frameborder="0" allowfullscreen></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID3" frameborder="0" allowfullscreen></iframe>
-        </div>
+        <h1>Top Laptops Gamer</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="IR/laptops/ASUS TUF A15.jpg" height="200" width="200"></td>
+                    <td>HP VICTUS 16</td>
+                    <td>12000 Bs.</td>
+                </tr>
+                <tr>
+                    <td><img src="IR/laptops/HP VICTUS 16.jpg" height="200" width="200"></td>
+                    <td>ASUS TUF Gaming A15</td>
+                    <td>13500 Bs.</td>
+                </tr>
+                <tr>
+                    <td><img src="IR/laptops/Lenovo LOQ 15.jpg" height="200" width="200"></td>
+                    <td>Lenovo LOQ 15</td>
+                    <td>10500 Bs.</td>
+                </tr>
+            </tbody>
+        </table>
     </div>  
     <script src="script1.js"></script>   
 </body>
-</html>
+</html> 
