@@ -68,66 +68,72 @@
             color: #555; /* Color del texto */
             font-size: 0.9em; /* Tamaño de fuente más pequeño para mejor legibilidad */
         }
+
     </style>
     
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="listo.jpg" alt="Logo de Tienda de PC">
-        </div>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>  
-            <li><a href="novedades.html">Novedades</a></li>
-            <li>
-                <a href="welcometop.html">Ranking</a>
-                <div class="dropdown-content">
-                    <div class="submenu">
-                        <a href="#">Procesadores</a>
-                        <div class="submenu-content">
-                            <a href="topintel.html">Intel</a>
-                            <a href="topamd.html">AMD</a>
+    <section id="navegacion" class="navegacion">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731462103/2_qyazdq.png" alt="Logo de Tienda de PC">
+                </a>
+            </div>
+            <div class="nombrelogo">
+            </div>
+            <ul>
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>  <!-- funcional -->
+                <li><a style="font-size: 25px; font-weight: 700;"  href="novedades.html"><i>Novedades</i></a></li>
+                <li>
+                    <a style="font-size: 25px; font-weight: 700;"  href="welcometop.html"><i>Ranking</i></a>
+                    <div class="dropdown-content">
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"  href="#">Procesadores</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;"  href="topintel.html">Intel</a>
+                                <a  style="font-size: 25px; font-weight: 700;"  href="topamd.html">AMD</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"href="#">Tarjetas Gráficas</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;"  href="topnvidia.html">NVIDIA</a>
+                                <a style="font-size: 25px; font-weight: 700;"  href="topradeon.html">RADEON</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"  href="#">Laptops</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;" href="toplaptopgamer.html">Gamers</a>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="submenu">
-                        <a href="#">Tarjetas Gráficas</a>
-                        <div class="submenu-content">
-                            <a href="topnvidia.html">NVIDIA</a>
-                            <a href="topradeon.html">RADEON</a>
-                        </div>
-                    </div>
-                    <div class="submenu">
-                        <a href="#">Laptos</a>
-                        <div class="submenu-content">
-                            <a href="toplaptopgamer.html">Gamers</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li><a href="armapc.html">Arma tu pc</a></li>
-            <li><a href="meme.html">Contacto</a></li>
-        </ul>
-    </nav>
+                </li>
+                <li><a style="font-size: 25px; font-weight: 700;"  href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;"   href="contacto.html"><i>Contacto</i></a></li>
+            </ul>
+        </nav>
+    </section>
     <div class="content">
-        <h1>Tutoriales y Consejos</h1>
+        <h1 class="titulo-tucon">Tutoriales y Consejos</h1>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO1" frameborder="0" allowfullscreen></iframe>
             <p>Video de cabezera Descripción breve del tutorial.</p>
         </div>
         <section id="tutoriales">
-            <h2>Videos de Tutoriales</h2>
+            <h2 class="titulo-vitu">Videos de Tutoriales</h2>
             <div class="video-grid">
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO1" frameborder="0" allowfullscreen></iframe>
                     <p>Título del Tutorial 1: Descripción breve del tutorial.</p>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO2" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/4D0Ixh_AR04?si=bNUVb4boXSry6Tza" frameborder="0" allowfullscreen></iframe>
                     <p>Título del Tutorial 2: Descripción breve del tutorial.</p>
                 </div>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/ID_DEL_VIDEO3" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/4D0Ixh_AR04?si=bNUVb4boXSry6Tza" frameborder="0" allowfullscreen></iframe>
                     <p>Título del Tutorial 3: Descripción breve del tutorial.</p>
                 </div>
                 <div class="video-container">
@@ -146,7 +152,7 @@
         </section>
         
         <section id="consejos">
-            <h2>Consejos Útiles</h2>
+            <h2 class="titulo-concetu">Consejos Útiles</h2>
             <div class="consejos-grid">
                 <div class="consejo-card">
                     <img src="https://i.pinimg.com/originals/6b/57/87/6b5787ff3501f9a45afdade14b9d48bd.gif" alt="Icono de compatibilidad">

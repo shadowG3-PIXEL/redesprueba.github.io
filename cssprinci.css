@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -5,15 +6,17 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8; /* Fondo gris muy claro */
+    font-family: Roboto, Arial;
+    font-size: 25px;
+    background-color: #ffffff; /* Fondo gris muy claro */
     color: #2c3e50; /* Color de texto oscuro */
 }
 
-.navbar {
-    background-color: #ffffff; /* Fondo blanco para la navbar */
-    color: #2c3e50; /* Color de texto oscuro */
+.navegacion .navbar {
+    background: linear-gradient(to left, #ff0800, #9500ff);
+    color: #3d3838; /* Color de texto oscuro */
     position: fixed;
+    font-size: 25px;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -25,29 +28,31 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.navbar .logo img {
-    height: 50px;
-    transition: transform 0.3s ease;
+
+.navegacion .navbar .logo img {
+    margin-top: 10px;
+    height: 100px;
+    transition: transform 0.8s ease;
 }
 
-.navbar .logo img:hover {
+.navegacion .navbar .logo img:hover {
     transform: scale(1.1);
 }
 
-.navbar ul {
+.navegacion .navbar ul {
     list-style-type: none;
     display: flex;
     align-items: center; /* Centrar verticalmente las opciones */
     padding: 0; /* Eliminar padding */
 }
 
-.navbar ul li {
+.navegacion .navbar ul li {
     position: relative;
     margin-left: 20px; /* Espaciado entre los elementos del menú */
 }
 
-.navbar ul li a {
-    color: #2c3e50; /* Color de texto negro */
+.navegacion .navbar ul li a {
+    color: #ffffff; /* Color de texto negro */
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
@@ -56,16 +61,322 @@ body {
     transition: all 0.3s ease;
 }
 
+/*BOTONES COLORES NAVEGACION TOMAR EN CUENTA*/
 .navbar ul li a:hover {
-    background-color: #87a2dd; /* Color verde brillante en hover */
+    background: linear-gradient(to left, #801e1b, #410b61);/* Color verde brillante en hover */
     transform: translateY(-3px);
 }
 
-/* Estilos para el dropdown */
+/*COmments COMENTARIOS DE LA GENTE */
+.coments {
+    background: linear-gradient(to right, #da3b2d, #7710c1);
+    padding: 50px 20px;
+    display: flex; /* Establece el layout en fila */
+    flex-direction: row; /* Asegura que los elementos se alineen horizontalmente */
+    justify-content: flex-start; /* Alinea los elementos al inicio de la fila */
+    align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    overflow: hidden; /* Asegura que no sobresalgan elementos fuera del borde redondeado */
+    
+}
+
+.coments .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.coments h2 {
+    font-size: 48px;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    padding: 20px 0;
+}
+
+.coments .fila {
+    display: flex;
+    justify-content: space-between; /* Corregido a "space-between" */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+}
+
+.coments .fila .col {
+    width: 49%;
+    padding: 0 20px;
+}
+
+.coments .fila .col h3 {
+    font-size: 28px;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 25px;
+}
+
+.coments .fila .izquierda {
+    border-right: 2px solid #a200ff;
+}
+
+.coments .fila .derecha {
+    border-left:  2px solid #a200ff;
+}
+
+.coments .fila .item {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: rgb(71, 37, 165);
+    position: relative;
+    border-radius: 30px; /* Bordes redondeados en los elementos */
+}
+
+.coments .fila .item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.coments .fila .item .casa {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+
+.coments .fila .item .fecha {
+    display: block;
+    color: #fafafa;
+    margin-bottom: 10px;
+}
+
+.coments .fila .item p {
+    line-height: 24px;
+}
+
+.coments .fila .izq {
+    border-left: 2px solid #a200ff;
+    margin-right: 20px;
+}
+
+.coments .fila .der {
+    border-right: 2px solid #a200ff;
+    margin-left: 20px;
+}
+
+.coments .fila .item .conectori {
+    height: 2px;
+    background-color: #a200ff;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+
+.coments .fila .item .conectori .circuloi {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #a200ff;
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+
+.coments .fila .item .conectord {
+    height: 2px;
+    background-color: #a200ff;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+
+.coments .fila .item .conectord .circulod {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #a200ff;
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+
+/*carrusel*/
+.carrusel {
+    background: url(fon.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+}
+
+.empinfo {
+    background: linear-gradient(to top, rgba(23, 42, 58, 0.8), rgba(34, 53, 77, 1)), 
+    url(gaming2.jpg);
+    background-size: cover;
+    font-family: cursive;
+    padding: 100px 250px;
+    box-sizing: border-box;
+}
+/*TITULO INNOVACOMPUTECH*/
+.empinfo .company-info h2 {
+    color: #e95959; /* Color del título en azul brillante */
+    
+}
+/*INNOVA TEXTO*/
+.empinfo .company-info p {
+    color: #d4ced7; /* Color del texto en gris claro */
+    font-family: "a r i a l", serif;
+    margin-bottom: 40px; /* Añade espacio entre el texto y el video */
+    font-size: 1.6em;
+}
+
+
+/*IMAGENES ADICIONALES*/
+.adicionalimg{
+    background: linear-gradient(to right, #da3b2d, #7710c1);
+    padding: 100px 250px;
+    box-sizing: border-box;
+}
+
+.adicionalimg .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 20px; /* Espacio entre imágenes */
+}
+
+.adicionalimg .image-grid img {
+    width: 100%; /* Hacer que las imágenes ocupen todo el ancho del contenedor */
+    height: 300px; /* Establecer una altura fija */
+    object-fit: cover; /* Ajusta las imágenes sin deformarlas, cubriendo el área completa del contenedor */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+/*PREGUNTAS FRECUENTES*/
+.preguntasfrec {
+    display: flex;
+    flex-direction: c;
+    background: url(https://i.pinimg.com/originals/b9/c5/e5/b9c5e58543b8553bda7f17672ae39eec.gif);
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    padding: 200px 100px; 
+    box-sizing: border-box;
+    height: 500p;
+}
+.container {
+    max-width: 1000px;
+    max-height: 1000px;
+    margin: 4px auto;
+    padding: 20px;
+    background: linear-gradient(to right, #da3b2d, #7710c1);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Contenedor de preguntas con flexbox en una sola fila */
+#preguntasfrec {
+   
+    padding: 40px 0;
+    font-family: 'a r i a l', sans-serif;
+}
+
+/* Contenedor principal */
+.preguntasfrec .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 10px; /* Ajusta el padding */
+    text-align: center;
+    min-height: 800px; 
+    box-sizing: border-box; 
+    overflow: hidden; 
+}
+/* Título principal */
+.preguntasfrec h1 {
+    font-family: Robotica, Arial;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fffdfd; /* Color gris oscuro */
+}
+
+/* Estilos para las preguntas */
+.faq {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no cause que el contenido se desborde */
+    overflow: hidden; /* Asegura que el contenido dentro de .faq no se desborde */
+}
+/* Cambiar el color del h1 dentro de la sección de preguntas frecuentes */
+.preguntasfrec h1 {
+    color: #fcfbfb; /* Cambia esto por el color que prefieras */
+    font-size: 40px; /* Tamaño del texto (ajústalo según lo que prefieras) */
+    font-weight: 700; /* Peso de la fuente */
+}
+
+/* Título de cada pregunta */
+.faq h2 {
+    font-size: 28px;
+    font-weight: 700;   
+    color: #000000; /* Color oscuro para el título */
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+/* Respuesta de la pregunta */
+.faq p {
+    font-size: 26px;
+    color: #000000; /* Gris claro para el texto */
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Efecto hover en las preguntas */
+.faq:hover {
+    background-color: #ee68f3; /* Color de fondo al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más fuerte */
+}
+
+/* Estilo para cuando la respuesta está oculta (opcional si implementas JS para ocultar respuestas) */
+.faq .respuesta-oculta {
+    display: none;
+}
+
+/* Opcional: efecto de transición para el contenedor de la respuesta cuando se expande */
+.faq p {
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+
+
+/*PRODUCTOS*/
+.productos{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to left, #da3b2d, #7710c1);
+    padding: 50px 20px;
+    box-sizing: border-box;    
+}
+
+.productos .additional-images {
+    margin-top: 40px; /* Espacio superior */
+}
+
+.productos .content {
+    padding: 20px; /* Espaciado reducido */
+    margin-top: 80px; /* Ajustar margen superior para que no tape las imágenes */
+}
+
+/* ESTO SE ENCARGA DEL CSSS DE LOS MENUS DESPLEGABLES*/
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ffffff; /* Fondo blanco para el dropdown */
+    background-color: #000000; /* Fondo blanco para el dropdown */
     min-width: 200px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -98,7 +409,7 @@ body {
     position: absolute;
     left: 100%; /* Mostrar al lado derecho del elemento padre */
     top: 0;
-    background-color: #ffffff;
+    background-color: #000000;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     min-width: 150px;
     border-radius: 5px;
@@ -127,10 +438,12 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
 h1,
+/*ESTO CAMBIA EL COLOR DE LOS TITULOS DE COMENTARIOS*/
 h2 {
     margin-bottom: 20px;
-    color: #2980b9; /* Color azul para los encabezados */
+    color: #ffffff; /* Color azul para los encabezados */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
@@ -143,16 +456,19 @@ h1 {
 
 h2 {
     font-size: 2.5em; /* Tamaño más grande para subtítulos */
-    border-bottom: 3px solid #2980b9; /* Borde azul */
+    border-bottom: 3px solid #fd0101; /* Borde azul */
     padding-bottom: 10px;
     margin-top: 40px;
 }
 
-p {
-    line-height: 1.6;
-    margin-bottom: 20px;
+.item p {
+    color: #def674 !important; /* Forzar que el color verde se aplique */
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 10px;
     font-size: 1.1em;
-    color: #555555; /* Color de texto gris */
+    font-weight: 700;
 }
 
 .card {
@@ -201,24 +517,10 @@ footer p {
     margin: 0;
     font-size: 0.9em;
 }
-.additional-images {
-    margin-top: 40px; /* Espacio superior */
-}
 
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    gap: 20px; /* Espacio entre imágenes */
-}
-
-.image-grid img {
-    width: 100%; /* Hacer que las imágenes ocupen todo el ancho de la columna */
-    border-radius: 5px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-}
 
 .products-table a {
-    color: #000; /* Color negro para los enlaces */
+    color: #ffffff; /* Color negro para los enlaces */
     text-decoration: none; /* Sin subrayado */
 }
 
@@ -232,46 +534,49 @@ footer p {
     margin: 20px 0; /* Espacio superior e inferior */
     background-color: #f0f4f8; /* Fondo plomo */
 }
+.products-table {
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo semi-transparente oscuro para toda la tabla */
+    border-collapse: collapse; /* Asegura que las celdas se comporten bien */
+}
 
 .products-table th,
 .products-table td {
     padding: 15px; /* Espaciado reducido */
     text-align: left; /* Alinear texto a la izquierda */
+    border: none; /* Eliminar borde de las celdas */
+    background-color: rgba(0, 0, 0, 0.15); /* Fondo semi-transparente oscuro para las celdas */
 }
 
 .products-table th {
-    background-color: #f0f4f8; /* Color de fondo claro para los encabezados */
-    color: #111111; /* Color de texto oscuro para los encabezados */
+    background-color: rgba(71, 15, 122, 0.8); /* Fondo semi-transparente para los encabezados */
+    color: #ffffff; /* Color de texto blanco para los encabezados */
 }
 
 .products-table tr {
-    background-color: #f0f4f8; /* Color uniforme para todas las filas */
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo oscuro semi-transparente para las filas */
 }
 
-.products-table td {
-    border: none; /* Eliminar borde de las celdas */
-}
 
-      
-        /* Estilos para la ruleta de imágenes */
-        .image-slider {
+
+/* Estilos para la ruleta de imágenes */
+.image-slider {
+    width: 100%; 
+    height: 600px; 
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    margin-top: 20px;
-    width: 100%; /* Mantener el ancho completo */
-    max-width: 1200px; /* Aumentar el ancho máximo a 1200px o el tamaño que prefieras */
-    height: 600px; /* Aumentar la altura a 600px o cualquier tamaño deseado */
 }
-
 
 .image-slider img {
     width: 100%;
-    height: 100%; /* Asegúrate de que las imágenes llenen todo el contenedor */
+    height: 100%;
     display: none;
     border-radius: 10px;
-    object-fit: cover; /* Mantener la proporción de la imagen */
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
 
 .image-slider img.active {
     display: block; /* Mostrar solo la imagen activa */
@@ -287,38 +592,317 @@ footer p {
 }
 
 .image-slider .controls button {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con algo de transparencia */
     border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    border-radius: 5px;
+    padding: 10px;
     cursor: pointer;
+    font-size: 18px;
     transition: background-color 0.3s ease;
 }
 
 .image-slider .controls button:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 1); /* Color de fondo blanco al pasar el mouse */
+}
+@media (max-width: 728px) {
+    .navbar {
+        flex-direction: row; /* Mantener el diseño en fila */
+        align-items: center; /* Centrar verticalmente */
+        padding: 10px; /* Espaciado reducido */
+        overflow-x: auto; /* Permitir desplazamiento horizontal */
+        white-space: nowrap; /* Evitar que las opciones se envuelvan en múltiples líneas */
+    }
+
+    .navbar ul {
+        flex-direction: row; /* Mantener en fila */
+        width: auto; /* Ancho automático */
+    }
+
+    .navbar ul li {
+        margin-left: 10px; /* Espaciado entre elementos */
+        margin-bottom: 0; /* Eliminar margen inferior */
+    }
+
+    .navbar ul li a {
+        padding: 10px 15px; /* Espaciado normal */
+        font-size: 16px; /* Tamaño de fuente normal */
+    }
+
+    .content {
+        padding: 20px; /* Espaciado reducido */
+        margin-top: 80px; /* Ajustar margen superior para que no tape las imágenes */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Tamaño más pequeño para títulos */
+    }
+
+    h2 {
+        font-size: 2em; /* Tamaño más pequeño para subtítulos */
+    }
+
+    .products-table {
+        font-size: 0.9em; /* Tamaño de fuente más pequeño en la tabla */
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 10px; /* Espaciado reducido en celdas */
+    }
+
+    /* Ajustar el tamaño de las imágenes */
+    .image-grid img {
+        width: 100%; /* Ancho completo en móviles */
+        height: auto; /* Altura automática */
+    }
 }
 
-.company-info {
-    background-color: #ffffff; /* Fondo blanco */
-    padding: 30px;
-    border-radius: 10px;
-    margin: 20px 0; /* Espacio arriba y abajo */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
-    animation: fadeIn 0.5s ease-in-out, slideIn 0.5s ease-in-out; /* Animaciones de entrada */
+/*NAVEGACION INFERIOR*/
+footer{
+    background: linear-gradient(to left, #c20701, #7600ca);
+    padding: 30px 0 10px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
 }
 
-.company-info h2 {
-    font-family: 'Roboto', sans-serif; /* Tipografía moderna */
-    font-size: 4.5em; /* Tamaño grande para el encabezado */
-    color: #456f8b; /* Color azul vibrante para el encabezado */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el texto */
+footer .redes{
+    margin-bottom: 20px;
+    color: #000;
 }
 
-.company-info p {
-    font-family: 'Arial', sans-serif; /* Tipografía simple para el párrafo */
-    font-size: 1.2em; /* Tamaño del texto */
-    line-height: 1.6; /* Espaciado entre líneas */
+footer .redes a{
+    color: #000;
+    display: inline-block;
+    text-decoration: none;
+    border: 0px solid #000000;
+    border-radius: 250%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
 }
 
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #15312c;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+/* Cambiar el color de las letras */
+
+.item p {
+    color: #2ce2dc6d; /* Verde */
+}
+
+
+/* Cambiar el color y tamaño solo para el icono de WhatsApp */
+.redes a i.fa-whatsapp {
+    color: #ffffff; /* Color verde */
+    font-size: 40px; /* Tamaño más grande */
+}
+
+/* Cambiar el color cuando el icono de WhatsApp es hovered */
+.redes a i.fa-whatsapp:hover {
+    color: #ffffff; /* Color cuando se pasa el mouse */
+}
+
+.redes a i.fa-youtube {
+    color: #ffffff; /* Color verde */
+    font-size: 40px; /* Tamaño más grande */
+}
+
+/* Cambiar el color cuando el icono de WhatsApp es hovered */
+.redes a i.fa-youtube :hover {
+    color: #faf7f7  ; /* Color cuando se pasa el mouse */
+}
+
+/* Cambiar el color cuando el icono de WhatsApp es hovered */
+
+
+/* Cambiar el color cuando el icono de WhatsApp es hovered */
+
+.video-container {
+    text-align: center; /* Centra el video dentro del contenedor */
+    margin-bottom: 20px; /* Espacio entre el video y las imágenes */
+    padding: 10px; /* Espaciado interno para dar un poco de margen alrededor */
+    border: 2px solid #ccc; /* Bordes suaves alrededor del video */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo suave para el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para el contenedor */
+    max-width: 80%; /* Ajusta el contenedor al 80% del ancho de la pantalla */
+    margin-left: auto;
+    margin-right: auto; /* Centra el contenedor en la página */
+}
+
+.video-container iframe {
+    width: 100%; /* Hace que el iframe ocupe todo el ancho disponible */
+    height: 400px; /* Mantiene la altura fija del video */
+    border-radius: 10px; /* Bordes redondeados para el iframe */
+}
+
+.video-container:hover {
+    background-color: #e0e0e0; /* Cambia el color de fondo cuando pasa el ratón por encima */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más prominente al hacer hover */
+}
+
+@media (max-width: 768px) {
+    .video-container {
+        width: 95%; /* Ancho del contenedor ajustado en pantallas pequeñas */
+    }
+
+    .video-container iframe {
+        height: 250px; /* Ajusta la altura del video en pantallas más pequeñas */
+    }
+}
+/* componetes css */
+#componente {
+    background: linear-gradient(to right, #da3b2d, #9b5bc9);
+    padding: 20px 0; /* Espaciado superior e inferior */
+}
+.modal-content h2 {
+    color: #333; /* Cambia el color a gris oscuro */
+}
+
+.product-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Espacio entre productos */
+        max-width: 1000px;
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        justify-content: center; /* Centra la galería */
+        margin: 0 auto; /* Centra la galería horizontalmente */
+}
+    
+    /* Estilos para los productos */
+    .product-item {
+        flex: 1 1 calc(25% - 20px); /* 4 productos por fila */
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s;
+        max-width: calc(25% - 20px);
+        display: flex;
+        flex-direction: column; /* Alinea los elementos en columna (imagen y título) */
+        justify-content: center; /* Centra las imágenes */
+        align-items: center; /* Centra las imágenes verticalmente */
+    }
+    
+    .product-item img {
+        width: 100%; /* Hace que la imagen ocupe todo el contenedor */
+        height: 200px;
+        object-fit: cover; /* Recorta la imagen para que llene el área sin distorsionarse */
+        border-radius: 5px;
+    }
+    
+    /* Título debajo de la imagen */
+    .product-item h3 {
+        margin-top: 10px; /* Espacio entre la imagen y el título */
+        font-size: 1.2rem;
+        color: #ffffff; /* Color del texto del título */
+        text-align: center; /* Asegura que el título esté centrado */
+    }
+    
+    /* Modal */
+    .modal {
+        display: none; /* Inicialmente oculto */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center; /* Centra el contenido del modal */
+    }
+    
+    /* Modal Content */
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 800px;
+        width: 90%;
+        display: flex;
+        flex-direction: row; /* Alinea la imagen y el texto en fila */
+        gap: 20px;
+        position: relative;
+        justify-content: center;
+        align-items: center; /* Centra verticalmente todo el contenido */
+    }
+    
+    /* Imagen dentro del modal */
+    .modal-content img {
+        width: 40%; /* Ajustamos el tamaño de la imagen */
+        height: auto;
+        max-width: none;
+        max-height: 70vh; /* Mantiene la imagen dentro de la pantalla */
+        border-radius: 5px;
+        display: block;
+        margin: 0;
+    }
+    
+    /* Detalles del producto en el modal */
+    .modal-details {
+        flex: 1;
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra el texto verticalmente */
+        align-items: flex-start; /* Alinea el texto a la izquierda */
+    }
+    
+    /* Botón para cerrar el modal */
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #333;
+    }
+/* rankig tabla principal RANKINGGG*/
+    .table{
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 67px 20px; 
+    }
+    /* colores titulos de rankings///PROCESADORES SUB MENUS */
+    .titulo-amd {
+        color: #c56300; 
+    }
+    .titulo-intel {
+        color: #0071c5; 
+    }
+    .titulo-nvidia {
+        color: #21a812; 
+    }
+    .titulo-radeon{
+        color: #e22020;
+    }
+    .titulo-laptop{
+        color: #1c3651;
+    }
+    /* titulos recomendaciones*/
+    .titulo-tucon{
+        color: #616ec3;
+    }
+    .titulo-concetu{
+        color: #1d8a76;
+    }
+    .titulo-vitu{
+        color: #c81616;
+    }
+    

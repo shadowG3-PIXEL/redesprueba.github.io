@@ -6,48 +6,54 @@
     <title>Innovaciones en Tecnología de PC</title>
     <link rel="stylesheet" href="cssprinci.css"> 
     <link rel="stylesheet" href="graficorak.css"> 
-    <script src="graficoss.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="listo.jpg" alt="Logo de Tienda de PC">
-        </div>
-        <ul>
-            <li><a href="index.html">Inicio</a></li> 
-            <li>
-                <a href="novedades.html">Novedades</a>
-            </li>
-            <li>
-                <a href="welcometop.html">Ranking</a>
-                <div class="dropdown-content">
-                    <div class="submenu">
-                        <a href="#">Procesadores</a>
-                        <div class="submenu-content">
-                            <a href="topintel.html">Intel</a>
-                            <a href="topamd.html">AMD</a>
+    
+    <section id="navegacion" class="navegacion">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731462103/2_qyazdq.png" alt="Logo de Tienda de PC">
+                </a>
+            </div>
+            <div class="nombrelogo">
+            </div>
+            <ul>
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>  <!-- funcional -->
+                <li><a style="font-size: 25px; font-weight: 700;"  href="novedades.html"><i>Novedades</i></a></li>
+                <li>
+                    <a style="font-size: 25px; font-weight: 700;"  href="welcometop.html"><i>Ranking</i></a>
+                    <div class="dropdown-content">
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"  href="#">Procesadores</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;"  href="topintel.html">Intel</a>
+                                <a  style="font-size: 25px; font-weight: 700;"  href="topamd.html">AMD</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"href="#">Tarjetas Gráficas</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;"  href="topnvidia.html">NVIDIA</a>
+                                <a style="font-size: 25px; font-weight: 700;"  href="topradeon.html">RADEON</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"  href="#">Laptops</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;" href="toplaptopgamer.html">Gamers</a>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="submenu">
-                        <a href="#">Tarjetas Gráficas</a>
-                        <div class="submenu-content">
-                            <a href="topnvidia.html">NVIDIA</a>
-                            <a href="topradeon.html">RADEON</a>
-                        </div>
-                    </div>
-                    <div class="submenu">
-                        <a href="#">Laptos</a>
-                        <div class="submenu-content">
-                            <a href="toplaptopgamer.html">Gamers</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li><a href="armapc.html">Arma tu pc</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+                </li>
+                <li><a style="font-size: 25px; font-weight: 700;"  href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;"   href="contacto.html"><i>Contacto</i></a></li>
+            </ul>
+        </nav>
+    </section>
+<section>
     <div class="content">
         <div class="container">
             <h1>Ranking de procesadores</h1>
@@ -196,6 +202,8 @@
                     }
                 }
             }
-        });</script>  
+        });
+    </script>
+</section>  
 </body>
 </html>

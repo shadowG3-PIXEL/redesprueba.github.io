@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Blog de Tecnología PC</title>
     <link rel="stylesheet" href="cssprinci.css"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
     <style>
         
         .contact-container {
@@ -15,7 +17,7 @@
         }
 
         .big-logo {
-    width: 200px; /* Ajusta el tamaño según sea necesario */
+    width: 400px; /* Ajusta el tamaño según sea necesario */
     animation: float 2s infinite; /* Aplica la animación de forma infinita */
 }
 
@@ -47,7 +49,8 @@
 
         .contact-card h2, .blog-features h2 {
             margin-bottom: 20px;
-            color: #007bff;
+            color: #346ead;
+            text-align: center;
         }
 
         .features-grid {
@@ -71,129 +74,230 @@
         }
 
         .feature-item h3 {
-            color: #007bff;
+            color: #a833da;
             margin-bottom: 10px;
         }
 
-        .social-links {
-            margin-top: 40px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+.social-links h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
 
-        .social-links a {
-            margin: 10px;
-            font-size: 24px;
-            color: #007bff;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-        }
+i.fa-whatsapp {
+    color: #25D366; /* Color verde */
+    font-size: 40px; /* Tamaño más grande */
+}
 
-        .social-links a:hover {
-            transform: scale(1.2);
-        }
+/* Cambiar el color cuando el icono de WhatsApp es hovered */
+i.fa-whatsapp:hover {
+    color: #128C7E; /* Color cuando se pasa el mouse */
+}
 
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
+i.fa-youtube {
+    color: #d50b0b; /* Color verde */
+    font-size: 40px; /* Tamaño más grande */
+}
 
-        .social-icons a {
-            margin: 0 15px;
-            font-size: 24px;
-            color: #007bff;
-        }
+/* Cambiar el color cuando el icono de WhatsApp es hovered */
+i.fa-youtube :hover {
+    color: #d50b0b  ; /* Color cuando se pasa el mouse */
+}
+i.fa-twitter {
+    color: #0b95d5; /* Color verde */
+    font-size: 40px; /* Tamaño más grande */
+}
+
+/* Cambiar el color cuando el icono de WhatsApp es hovered */
+i.fa-twitter :hover {
+    color: #0b95d5  ; /* Color cuando se pasa el mouse */
+}
+i.fa-facebook-f {
+    color: #01354d; /* Color verde */
+    font-size: 40px; /* Tamaño más grande */
+}
+     
+
+/* Especificidad para la sección de fundadores */
+.founders-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.founders-section h2 {
+    font-size: 2em;
+    color: #0071c5; /* Cambia este código de color al que desees */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+.founders-section .features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.founders-section .feature-item {
+    background-color: #ffffff;
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.founders-section .feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.founders-section .feature-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.founders-section .feature-item h3 {
+    font-size: 1.2em;
+    color: #0071c5;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.founders-section .feature-item p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="listo.jpg" alt="Logo de Tienda de PC" style="width: 50px; height: auto;">
-        </div>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="novedades.html">Novedades</a></li>
-            <li>
-                <a href="welcometop.html">Ranking</a>
-                <div class="dropdown-content">
-                    <div class="submenu">
-                        <a href="#">Procesadores</a>
-                        <div class="submenu-content">
-                            <a href="topin.html">Intel</a>
-                            <a href="topamd.html">AMD</a>
+    <section id="navegacion" class="navegacion">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731462103/2_qyazdq.png" alt="Logo de Tienda de PC">
+                </a>
+            </div>
+            <div class="nombrelogo">
+            </div>
+            <ul>
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>  <!-- funcional -->
+                <li><a style="font-size: 25px; font-weight: 700;"  href="novedades.html"><i>Novedades</i></a></li>
+                <li>
+                    <a style="font-size: 25px; font-weight: 700;"  href="welcometop.html"><i>Ranking</i></a>
+                    <div class="dropdown-content">
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"  href="#">Procesadores</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;"  href="topintel.html">Intel</a>
+                                <a  style="font-size: 25px; font-weight: 700;"  href="topamd.html">AMD</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"href="#">Tarjetas Gráficas</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;"  href="topnvidia.html">NVIDIA</a>
+                                <a style="font-size: 25px; font-weight: 700;"  href="topradeon.html">RADEON</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"  href="#">Laptops</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;" href="toplaptopgamer.html">Gamers</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="submenu">
-                        <a href="#">Tarjetas Gráficas</a>
-                        <div class="submenu-content">
-                            <a href="topnvidia.html">NVIDIA</a>
-                            <a href="topradeon.html">RADEON</a>
-                        </div>
-                    </div>
-                    <div class="submenu">
-                        <a href="#">Laptos</a>
-                        <div class="submenu-content">
-                            <a href="toplaptopgamer.html">Gamers</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li><a href="armapc.html">Arma tu pc</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+                </li>
+                <li><a style="font-size: 25px; font-weight: 700;"  href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;"   href="contacto.html"><i>Contacto</i></a></li>
+            </ul>
+        </nav>
+    </section>
     <div class="content">
         <div class="contact-container">
-            <img src="listo2.png" alt="Logo del Blog" class="big-logo">
+            <a href="verconsul.php">
+                <img src="listo2.png" alt="Logo del Blog" class="big-logo">
+            </a>
             
             <div class="contact-card">
-                <h2>Contacto Editorial</h2>
-                <p><strong>Email Principal:</strong> editor@tublog.com</p>
-                <p><strong>Email para Noticias:</strong> noticias@tublog.com</p>
-                <p><strong>Email para Reviews:</strong> reviews@tublog.com</p>
+                <h2 class="contacino">Contacto Equipo InnovaCompuTech</h2>
+                <p><strong>Gmail Principal:</strong> InnovaCompuTech@Gmail.com</p>
+                <p><strong>Gmail para Noticias:</strong> InnovaCompuTechnoti@tublog.com</p>
+                <p><strong>Gmail para Reviews:</strong> InnovaCompuTechreview@tublog.com</p>
                 <p><strong>Tiempo de Respuesta:</strong> 24-48 horas</p>
                 <h2>Redes y Comunidad</h2>
-                <p><strong>Discord:</strong> discord.gg/tublog</p>
-                <p><strong>Telegram:</strong> t.me/tublog</p>
-                <p><strong>YouTube:</strong> youtube.com/@tublog</p>
-                <p><strong>Twitch:</strong> twitch.tv/tublog</p>
+                <p><strong><i class="fab fa-whatsapp"></i> WhatsApp:</strong> <a href="" target="_blank">unete al grupo de WhatsApp</a></p>
+                <p><strong><i class="fab fa-youtube"></i>YouTube:</strong> www.youtube.com/@InnovaCompuTech</p>
+                <p><strong><i class="fab fa-tiktok"></i> TikTok:</strong> www.tiktok.com/@InnovaCompuTech</p>
+
             </div>
 
             <div class="blog-features">
-                <h2>Lo Que Encontrarás en Nuestro Blog</h2>
+                <h2>Lo Que Encontrarás en Nuestro "Blog"</h2>
                 <div class="features-grid">
                     <div class="feature-item">
-                        <h3>Reviews Detalladas</h3>
+                        <h3>Reviews</h3>
                         <p>Análisis profundos de los últimos componentes y periféricos para PC</p>
                     </div>
                     <div class="feature-item">
-                        <h3>Benchmarks</h3>
+                        <h3>Consejos</h3>
                         <p>Pruebas de rendimiento y comparativas entre diferentes componentes</p>
                     </div>
                     <div class="feature-item">
-                        <h3>Noticias Tech</h3>
+                        <h3>Noticias</h3>
                         <p>Las últimas novedades del mundo de la tecnología y hardware</p>
                     </div>
+                    
                 </div>
             </div>
-
-            <div class="social-links">
-                <h2>Síguenos en Redes Sociales</h2>
-                <div class="social-icons">
-                    <a href="#" title="YouTube">📹</a>
-                    <a href="#" title="Twitter">🐦</a>
-                    <a href="#" title="Instagram">📷</a>
-                    <a href="#" title="Discord">💬</a>
-                    <a href="#" title="Telegram">📱</a>
+            <div class="blog-features founders-section">
+                <h2>Fundadores de InnovaCompuTech</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <img src="https://pbs.twimg.com/media/E3IlcZpWEAAP170.png" alt="Jose" class="feature-image">
+                        <h3>Jose A. Janco Bustos</h3>
+                        <p>Encargado de realizar análisis técnicos y escribir reseñas detalladas.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://i.pinimg.com/736x/e0/ac/5f/e0ac5f69ef9e29beca064f151e736c99.jpg" alt="Jeyko" class="feature-image">
+                        <h3>Jeyko R. Medina Gutierrez</h3>
+                        <p> Responsable de realizar benchmarks y comparativas entre productos.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="https://ih1.redbubble.net/image.5448475509.5947/st,small,507x507-pad,600x600,f8f8f8.jpg" alt="Juan" class="feature-image">
+                        <h3>Juan D. Cano Ordes</h3>
+                        <p>Especialista en noticias y tendencias tecnológicas, se enfoca en novedades del mercado.</p>
+                    </div>
+                    
                 </div>
             </div>
+            
+            </div>
+            
+            </div>
+            
         </div>
     </div>
+    <footer>
+        <a href="#" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a><section id="redes">
+        <div class="redes">
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=HZcMPCYanIbi7dH3"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </section>
+    </footer>
+    <script src="script1.js"></script>  
 </body>
 </html>

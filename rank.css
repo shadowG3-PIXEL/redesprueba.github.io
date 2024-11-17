@@ -1,29 +1,79 @@
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-table {
+/* Reset específico para la tabla */
+.content table {
     width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 25px 0;
+    background-color: #ffffff; /* Fondo blanco de la tabla */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #ddd;
+/* Encabezados más específicos */
+.content table th {
+    background-color: #e0f7fa; /* Azul claro */
+    color: #004d40; /* Verde oscuro para contraste */
+    padding: 15px; /* Espaciado reducido para un aspecto más elegante */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Espaciado de letras reducido */
+    font-weight: bold;
+    font-size: 1em; /* Tamaño de fuente reducido */
+    text-align: center;
+    border: none;
 }
 
-th {
-    background-color: #333;
-    color: white;
+/* Celdas más específicas */
+.content table td {
+    padding: 18px;
+    text-align: center;
+    background-color: #ffffff; /* Fondo blanco para las celdas */
+    border: 1px solid #e0e0e0; /* Borde gris claro */
+    color: #333333; /* Texto oscuro para contraste */
+    transition: all 0.3s ease;
 }
 
-tr:nth-child(even) {
-    background-color: #f2f2f2;
+/* Filas alternas */
+.content table tr:nth-child(even) td {
+    background-color: #f7f7f7; /* Fondo gris claro para filas alternas */
 }
 
-tr:hover {
-    background-color: #ddd;
+/* Hover en las filas */
+/* Hover en las filas */
+.content table tr:hover td {
+    background-color: #05a5b4; /* Azul más oscuro al pasar el mouse */
+    color: #ffffff; /* Texto blanco al pasar el mouse */
+}
+
+
+/* Enlaces en la tabla */
+.content table a {
+    color: #004d40; /* Verde oscuro */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.content table a:hover {
+    color: #004d40; /* Verde oscuro para el texto al pasar el mouse */
+    background-color: #e0f7fa; /* Azul claro como fondo */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content table {
+        margin: 10px 0;
+    }
+    
+    .content table th,
+    .content table td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
 }

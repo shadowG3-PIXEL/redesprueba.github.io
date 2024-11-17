@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovaciones en Tecnología de PC</title>
+    <link rel="stylesheet" href="cssprinci.css"> 
+    <link rel="stylesheet" href="cssarmapc.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <section id="navegacion" class="navegacion">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731462103/2_qyazdq.png" alt="Logo de Tienda de PC">
+                </a>
+            </div>
+            <div class="nombrelogo">
+            </div>
+            <ul>
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>  <!-- funcional -->
+                <li><a style="font-size: 25px; font-weight: 700;"  href="novedades.html"><i>Novedades</i></a></li>
+                <li>
+                    <a style="font-size: 25px; font-weight: 700;"  href="welcometop.html"><i>Ranking</i></a>
+                    <div class="dropdown-content">
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"  href="#">Procesadores</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;"  href="topintel.html">Intel</a>
+                                <a  style="font-size: 25px; font-weight: 700;"  href="topamd.html">AMD</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"href="#">Tarjetas Gráficas</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;"  href="topnvidia.html">NVIDIA</a>
+                                <a style="font-size: 25px; font-weight: 700;"  href="topradeon.html">RADEON</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"  href="#">Laptops</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;" href="toplaptopgamer.html">Gamers</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a style="font-size: 25px; font-weight: 700;"  href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;"   href="contacto.html"><i>Contacto</i></a></li>
+            </ul>
+        </nav>
+    </section>
+    
+
+    <div class="content">
+    <section>       
+            <div class="armapccon">
+            <form id="pc-config-form" onsubmit="event.preventDefault(); calcularPrecio();">
+                <h1>Arma tu PC</h1>
+                <!-- Procesador -->
+                <label for="procesador">Selecciona un Procesador:</label>
+                <select id="procesador">
+                    <option value="0">Selecciona un procesador</option>
+                </select>
+                <!-- Tarjeta Gráfica -->                 
+                <label for="tarjeta_grafica">Selecciona una Tarjeta Gráfica:</label>                 
+                <select id="tarjeta_grafica" >                     
+                    <option value="" disabled selected hidden>Selecciona una  tarjeta grafica</option>                 
+                </select>
+                <!-- RAM -->
+                <label for="ram">Selecciona la Memoria RAM:</label>
+                <select id="ram">
+                    <option value="0">-- Selecciona --</option>
+                </select>
+                <!-- Almacenamiento -->
+                <label for="almacenamiento">Selecciona el Almacenamiento:</label>
+                <select id="almacenamiento">
+                    <option value="0">-- Selecciona --</option>
+                </select>
+                <!-- Fuente de Poder -->
+                <label for="fuente_poder">Selecciona una Fuente de Poder:</label>
+                <select id="fuente_poder">
+                    <option value="0">-- Selecciona --</option>
+                </select>
+                <!-- Case -->
+                <label for="cases">Selecciona un Case:</label>
+                <select id="cases">
+                    <option value="0">-- Selecciona --</option>
+                </select>
+                <!-- Refrigeración -->
+                <label for="refrigeracion">Selecciona un Sistema de Refrigeración:</label>
+                <select id="refrigeracion">
+                    <option value="0">-- Selecciona --</option>
+                </select>
+
+                <div class="button-container">
+                    <button type="submit">Calcular Precio</button>
+                    <button type="button" onclick="borrarOpciones()">Borrar Opciones</button>
+                </div>
+                <div class="total" id="precio-total"></div>
+
+            </form>
+    </section>    
+        
+    </div>  
+    
+
+    <script>
+        // Cargar los datos de los componentes desde un archivo JSON
+        fetch('componentes.json')
+            .then(response => response.json())
+            .then(data => {
+                for (const [categoria, opciones] of Object.entries(data)) {
+                    const selectElement = document.getElementById(categoria);
+                    opciones.forEach(opcion => {
+                        const optionElement = document.createElement("option");
+                        optionElement.value = opcion.precio;
+                        optionElement.textContent = `${opcion.nombre} - Bs ${opcion.precio}`;
+                        selectElement.appendChild(optionElement);
+                    });
+                }
+            })
+            .catch(error => console.error('Error cargando el archivo JSON:', error));
+
+        // Función para calcular el precio total
+        function calcularPrecio() {
+            let total = 0;
+            document.querySelectorAll("select").forEach(select => {
+                total += parseFloat(select.value) || 0;
+            });
+            document.getElementById("precio-total").textContent = `Precio total: Bs ${total}`;
+        }
+
+        // Función para borrar las opciones seleccionadas
+        function borrarOpciones() {
+            document.getElementById("pc-config-form").reset();
+            document.getElementById("precio-total").textContent = "";
+        }
+    </script>
+</body>
+<footer>
+    <a href="#" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+    </a><section id="redes">
+    <div class="redes">
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=HZcMPCYanIbi7dH3"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+</section>
+</footer>
+</html>

@@ -4,119 +4,294 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovaciones en Tecnología de PC</title>
-    <link rel="stylesheet" href="cssprinci.css"> 
+    <link rel="stylesheet" href="cssprinci.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
 </head>
 <body>
+    <!-- Navegación -->
+<section id="navegacion" class="navegacion">
     <nav class="navbar">
         <div class="logo">
             <a href="index.html">
-                <img src="listo.jpg" alt="Logo de Tienda de PC">
+                <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731462103/2_qyazdq.png" alt="Logo de Tienda de PC">
             </a>
         </div>
         <div class="nombrelogo">
-            <p>InnovaCompuTech
         </div>
         <ul>
-            <li><a href="index.html">Inicio</a></li>  <!-- funcional  -->
+            <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>  <!-- funcional -->
+            <li><a style="font-size: 25px; font-weight: 700;"  href="novedades.html"><i>Novedades</i></a></li>
             <li>
-                <a href="novedades.html">Novedades</a>
-            </li>
-            <li>
-                <a href="welcometop.html">Ranking</a>
+                <a style="font-size: 25px; font-weight: 700;"  href="welcometop.html"><i>Ranking</i></a>
                 <div class="dropdown-content">
                     <div class="submenu">
-                        <a href="#">Procesadores</a>
+                        <a style="font-size: 25px; font-weight: 700;"  href="#">Procesadores</a>
                         <div class="submenu-content">
-                            <a href="topintel.html">Intel</a>
-                            <a href="topamd.html">AMD</a>
-                        </div>
-                    </div>
-
-                    <div class="submenu">
-                        <a href="#">Tarjetas Gráficas</a>
-                        <div class="submenu-content">
-                            <a href="topnvidia.html">NVIDIA</a>
-                            <a href="topradeon.html">RADEON</a>
+                            <a style="font-size: 25px; font-weight: 700;"  href="topintel.html">Intel</a>
+                            <a  style="font-size: 25px; font-weight: 700;"  href="topamd.html">AMD</a>
                         </div>
                     </div>
                     <div class="submenu">
-                        <a href="#">Laptos</a>
+                        <a style="font-size: 25px; font-weight: 700;"href="#">Tarjetas Gráficas</a>
                         <div class="submenu-content">
-                            <a href="toplaptopgamer.html">Gamers</a>
+                            <a style="font-size: 25px; font-weight: 700;"  href="topnvidia.html">NVIDIA</a>
+                            <a style="font-size: 25px; font-weight: 700;"  href="topradeon.html">RADEON</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a style="font-size: 25px; font-weight: 700;"  href="#">Laptops</a>
+                        <div class="submenu-content">
+                            <a style="font-size: 25px; font-weight: 700;" href="toplaptopgamer.html">Gamers</a>
                         </div>
                     </div>
                 </div>
             </li>
-            <li><a href="armapc.php">Arma tu pc</a></li>
-            <li><a href="meme.html">Contacto</a></li>
+            <li><a style="font-size: 25px; font-weight: 700;"  href="armapc.html"><i>Arma tu pc</i></a></li>
+            <li><a style="font-size: 25px; font-weight: 700;"   href="contacto.html"><i>Contacto</i></a></li>
         </ul>
     </nav>
+</section>
+
+<!-- Información de la Empresa -->
+<section id="empinfo" class="empinfo">
+    <div class="company-info">
+        <h2>InnovaCompuTech</h2>
+        <p>En nuestra página, nos dedicamos a proporcionar información necesaria sobre computadoras y sus componentes. Ofrecemos guías y los recursos para ayudarte a entender sobre tarjetas gráficas potentes. Nuestro objetivo es ayudar a cada usuario, ya sea un jugador, un profesional o un entusiasta de la tecnología, con el conocimiento necesario para tomar decisiones informadas. ¡Explora los posts de artículos y potencia tu conocimiento tecnológica!</p>
+    </div>
+    <br>
+    <!-- Video -->
+    <div class="video-container">
+        <iframe width="600" height="400" src="https://www.youtube.com/embed//WCe8k0NvGbM?si=ZYbqa8xexq1p4POS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+    <!-- Slider de imágenes -->
+    <section id="carrusel" class="carrusel">
     <div class="content">
         <div class="image-slider">
             <img src="https://i.pinimg.com/originals/98/58/d9/9858d9207a3840de7ade0e3f41982e94.jpg" class="active" alt="Imagen 1">
             <img src="https://www.guiahardware.es/wp-content/uploads/2021/06/Mejores-configuraciones-PC-Gamer-por-piezas-.webp" alt="Imagen 2">
             <img src="https://images.unsplash.com/photo-1626218174358-7769486c4b79?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGMlMjBnYW1pbmd8ZW58MHx8MHx8fDA%3D" alt="Imagen 3">
+            <img src="https://img.pccomponentes.com/pcblog/2960/ordenadores-gaming-mas-baratos-1.jpg"  alt="Imagen 4">
             <div class="controls">
                 <button id="prevBtn">❮</button>
                 <button id="nextBtn">❯</button>
             </div>
         </div>
+    </section>
+
+    <!-- componentes-->
+    <section id="componente" class="conponente">
+        <div class="product-gallery">
+            <h1>Componetes Recomendados </h1>
+            <!-- Primera fila de productos -->
+            <div class="product-item" onclick="showModal('Procesador CORE I5', 'Intel CORE i5 10400. Con 6 núcleos, 12 subprocesos y una frecuencia base de 2,9 GHz, el Intel® Core™ i5-10400 tiene el poder de brindar una experiencia de juego perfecta. Bajo carga, el Core™ i5-10400 puede alcanzar una velocidad de reloj de 4,3 GHz con la tecnología Intel® Turbo Boost Max 2.0, proporcionando energía cuando más la necesita.', 'https://symcomputadores.com/wp-content/uploads/2022/09/procesador.jpg')">
+                <img src="https://symcomputadores.com/wp-content/uploads/2022/09/procesador.jpg" alt="Procesador de Alto Rendimiento">
+                <h3>Procesador CORE i5</h3>
+            </div>    
+            <div class="product-item" onclick="showModal('Procesador CORE i9', 'Intel Core i9-12900K Procesador de escritorio para juegos con gráficos integrados y 16 núcleos (8P+8E) hasta 5.2 GHz desbloqueado LGA1700 Serie 600 Chipset 125W.', 'https://www.ofimax.net/imgs/productos/_original_108153.jpg')">
+                <img src="https://www.ofimax.net/imgs/productos/_original_108153.jpg" alt="Producto 2">
+                <h3>Procesador CORE i9</h3>
+            </div>
+            <div class="product-item" onclick="showModal('Procesador RYZEN 9', 'El AMD Ryzen™ 9 7900X es un potente procesador para computadoras de escritorio para gaming y streaming que está diseñado con 12 núcleos de CPU y 24 subprocesos, y tiene una velocidad de reloj base de 4,7 GHz.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFUEZcIJ7S198FEhOz7z0kYWmLnJo72ksVL28Wh_4rrnRUsiniHrAH4rIMpNqTSGTxYcY&usqp=CAU')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFUEZcIJ7S198FEhOz7z0kYWmLnJo72ksVL28Wh_4rrnRUsiniHrAH4rIMpNqTSGTxYcY&usqp=CAU" alt="Producto 3">
+                <h3>Procesador RYZEN 9</h3>
+            </div>
+            <div class="product-item" onclick="showModal('Procesador RYZEN 7', 'El AMD Ryzen™ 7 5800X cuenta con ocho núcleos optimizados para equipos de gaming de altos FPS.', 'https://www.infotec.com.pe/41432-large_default/procesador-amd-ryzen-7-5800x-38ghz-36mb-100-100000063wof-am4.jpg')">
+                <img src="https://www.infotec.com.pe/41432-large_default/procesador-amd-ryzen-7-5800x-38ghz-36mb-100-100000063wof-am4.jpg" alt="Producto 4">
+                <h3>Procesador RYZEN 7</h3>
+            </div>
         
-        <div class="company-info">
-            <h2>InnovaCompuTech</h2>
-            <p>En nuestra página, nos dedicamos a proporcionar información necesaria sobre computadoras y sus componentes. 
-                Ofrecemos guías y los recursos para ayudarte a entender sobre tarjetas gráficas potentes.
-                Nuestro objetivo es ayudar a cada usuario, ya sea un jugador, un profesional o un 
-                entusiasta de la tecnología,  con el conocimiento necesario para tomar decisiones informadas. 
-                ¡Explora nuestros artículos y potencia tu experiencia tecnológica!</p>
+            <!-- tarjetas graficas  -->
+            <div class="product-item" onclick="showModal('GeForce RTX 4090', 'La NVIDIA® GeForce RTX™ 4090 es la GPU GeForce definitiva. Aporta un enorme salto en rendimiento, eficiencia y gráficos potenciados por la IA. Disfruta de juegos de altísimo rendimiento, mundos virtuales increíblemente detallados con trazado de rayos, una productividad sin precedentes y nuevas formas de crear. Está impulsada por la arquitectura NVIDIA Ada Lovelace y cuenta con 24 GB de memoria G6X para ofrecer la experiencia definitiva a gamers y creadores.', 'https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/Items/912-V510-400_800.jpg')">
+                <img src="https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/Items/912-V510-400_800.jpg" alt="Producto 5">
+                <h3>GeForce RTX 4090</h3>
+            </div>
+            <div class="product-item" onclick="showModal('GeForce RTX 4080', 'La GeForce RTX™ 4080 ofrece el ultra rendimiento y las funciones que demandan los jugadores entusiastas y los creadores. Da vida a tus juegos y proyectos creativos con el trazado de rayos y los gráficos potenciados por la IA. Está equipada con la arquitectura Ada Lovelace de NVIDIA y hasta 16 GB de memoria G6X ultrarrápida.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjEWmfwPEb-ZQQOuXJbmh-zEnSt1lm3pW00Q&s')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjEWmfwPEb-ZQQOuXJbmh-zEnSt1lm3pW00Q&s" alt="Producto 6">
+                <h3>GeForce RTX 4080</h3>
+            </div>
+            <div class="product-item" onclick="showModal('Radeon RX 7900 XTX', 'ASUS TUF Gaming Radeon™ RX 7900 XTX OC Edition 24GB GDDR6 optimizada por dentro y por fuera para temperaturas más bajas y durabilidad.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnwgo_0Fu7oce4exp_MtAICbx7Sl0dGU0-w&s')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnwgo_0Fu7oce4exp_MtAICbx7Sl0dGU0-w&s" alt="Producto 7">
+                <h3>Radeon RX 7900 XTX</h3>
+            </div>
+            <div class="product-item" onclick="showModal('Radeon RX 7900 XT', 'ASUS TUF Gaming Radeon™ RX 7900 XT OC Edition 20GB GDDR6 optimizada por dentro y por fuera para temperaturas más bajas y durabilidad.', 'https://www.unicom.com.uy/WS/Fotos_WEB/Articulos/VARX7900XT/1200x1200_1.JPG')">
+                <img src="https://www.unicom.com.uy/WS/Fotos_WEB/Articulos/VARX7900XT/1200x1200_1.JPG" alt="Producto 8">
+                <h3>Radeon RX 7900 XT</h3>
+            </div>
+                <!-- tarjetas graficas  -->
+            <div class="product-item" onclick="showModal('ASUS ROG Crosshair X670E Hero (AMD)', 'La entrega de potencia inquebrantable y la gestión térmica robusta forman los principios indelebles de su credo. La conectividad de hipervelocidad, el soporte completo PCIE 5.0 y DDR5, y la iluminación Polymo agregan potentes capas de personalización de construcción en la parte superior.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn2JEELh9I6yUiGPu_GEViQVqtwFaxctoLPg&s')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn2JEELh9I6yUiGPu_GEViQVqtwFaxctoLPg&s" alt="Producto 5">
+                <h3>ASUS ROG Crosshair X670E Hero (AMD)</h3>
+            </div>
+            <div class="product-item" onclick="showModal('AORUS Master X670E (AMD)', 'Las placas base GIGABYTE incluyen varios programas útiles e intuitivos para ayudar a los usuarios a controlar todos los aspectos de la placa base y proporcionar un efecto de iluminación personalizable con una estética excepcional para adaptarse a su personalidad única.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUWVcfnMX00yppJY3UK4vh8izgZV8kSWyFNg&s')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUWVcfnMX00yppJY3UK4vh8izgZV8kSWyFNg&s" alt="Producto 6">
+                <h3>AORUS Master X670E (AMD)</h3>
+            </div>
+            <div class="product-item" onclick="showModal('ASRock (Intel)', 'El diseño mejorado de la fase de energía ofrece una entrega de potencia suave a los procesadores Intel® Core ™ 8 de generación más potentes, proporcionando capacidades de overclocking sin igual, baja temperatura para jugadores avanzados y reforzando la estabilidad del sistema para asumir todo tipo de arduas tareas.', 'https://cdna.pcpartpicker.com/static/forever/images/product/9e1eb50ed97ad182aa5c4d460b820a3e.1600.jpg')">
+                <img src="https://cdna.pcpartpicker.com/static/forever/images/product/9e1eb50ed97ad182aa5c4d460b820a3e.1600.jpg" alt="Producto 7">
+                <h3>ASRock (Intel)</h3>
+            </div>
+            <div class="product-item" onclick="showModal('MSI MEG Z790 GODLIKE', 'Diseñado con un disipador de calor negro y pesado que viene con un espejo oscuro y un diseño de talla en oro pálido que simboliza la forma y función atemporal, además de representar la perfección en su forma más pura. Con la última tecnología, transmisión de alta velocidad, ultra rendimiento y el primer panel de control M-Vision de la industria, el MEG Z790 GODLIKE está desarrollado para liberar el potencial de juego extremo del procesador Intel® Core de 14a y 13a generación.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnWqmEpgjAXFkwJc7gj50ra6QFFqcuOPJeTQ&s')">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnWqmEpgjAXFkwJc7gj50ra6QFFqcuOPJeTQ&s" alt="Producto 8">
+                <h3>MSI MEG Z790 GODLIKE</h3>
+            </div>
         </div>
-        
-        <!-- Sección de imágenes adicionales -->
+        <!-- Modal para mostrar los detalles del producto -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <img id="modal-image" src="" alt="Imagen del producto">
+                <div class="modal-details">
+                    <h2 id="modal-title">Título del producto</h2>
+                    <p id="modal-description">Descripción del producto</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="adicionalimg" class="adicionalimg">
+        <!-- Sección de Imágenes Adicionales -->
         <div class="additional-images">
             <div class="image-grid">
                 <img src="https://media.tenor.com/Z1u9YLbpVVwAAAAM/core-zen.gif" alt="Imagen 4">
                 <img src="https://steamuserimages-a.akamaihd.net/ugc/1768194395977027356/C7551B79397E4314A459027DE95A2751A83220E2/?imw=1024&imh=576&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" alt="Imagen 5">
                 <img src="https://media.tenor.com/QlCbchFpeN4AAAAM/mobile-soc-smartphone-soc.gif" alt="Imagen 6">
                 <img src="https://i.pinimg.com/originals/83/b8/09/83b809857acd41a7bad4935b4734f9fc.gif" alt="Imagen 7" width="500" height="310">
-
             </div>
         </div>
-        <!--tabla-->
-        <table class="products-table">
+    </section>
+    <section id="preguntasfrec" class="preguntasfrec">
+            <div class="container">
+                <h1><i>Preguntas Frecuentes</i></h1>
+                <div class="faq">
+                    <h2>¿Cuál es la mejor tarjeta gráfica para juegos?</h2>
+                    <p>Recomendamos la NVIDIA RTX 3080 por su excelente rendimiento en juegos a 4K.</p>
+                </div>
+        
+                <div class="faq">
+                    <h2>¿Qué procesador es mejor para edición de video?</h2>
+                    <p>El AMD Ryzen 9 5900X es ideal para tareas de edición de video y modelado 3D.</p>
+                </div>
+        
+                <div class="faq">
+                    <h2>¿Cuánta RAM necesito para jugar?</h2>
+                    <p>Se recomienda un mínimo de 16GB de RAM para una experiencia de juego fluida.</p>
+                </div>
+        
+                <div class="faq">
+                    <h2>¿Es necesario un refrigerador adicional para mi CPU?</h2>
+                    <p>Depende del modelo de tu CPU. Si planeas hacer overclocking, es recomendable un buen sistema de refrigeración.</p>
+                </div>
+            </div>
+    </section>     
+        <!-- Sección de Comentarios -->
+        <section id="coments" class="coments">
+            <div class="contenido-seccion">
+                <h2>¿Qué opina la gente de nosotros?</h2>
+                <div class="fila">
+                    <div class="col izquierda">
+                        <div class="item izq">
+                            <span class="casa">Maria G.</span>
+                            <p>"¡Excelente calidad y buenos precios! Encontré justo lo que necesitaba para mejorar mi setup"</p>
+                            <div class="conectori"><div class="circuloi"></div></div>
+                        </div>
+                        <div class="item izq">
+                            <span class="casa">Javier T.</span>
+                            <p>"El servicio fue increíble. Me ayudaron a elegir los mejores componentes para mi PC de gaming, ¡y todo llegó rapidísimo!"</p>
+                            <div class="conectori"><div class="circuloi"></div></div>
+                        </div>
+                        <div class="item izq">
+                            <span class="casa">Lucia R.</span>
+                            <p>"Una tienda confiable y con variedad. Recomendada para todos los gamers."</p>
+                            <div class="conectori"><div class="circuloi"></div></div>
+                        </div>
+                    </div>
+                    <div class="col derecha">
+                        <div class="item der">
+                            <span class="casa">Pedro L.</span>
+                            <p>"Muy satisfecho con mi compra, los productos son de primera y el envío fue súper rápido."</p>
+                            <div class="conectord"><div class="circulod"></div></div>
+                        </div>
+                        <div class="item der">
+                            <span class="casa">Ana M.</span>
+                            <p>"Gracias por el excelente servicio. Mis FPS se dispararon con mi nueva tarjeta gráfica, ¡feliz con la compra!"</p>
+                            <div class="conectord"><div class="circulod"></div></div>
+                        </div>
+                        <div class="item der">
+                            <span class="casa">Sofia J.</span>
+                            <p>"Atención al cliente excepcional y productos de calidad. Definitivamente volveré para futuras actualizaciones."</p>
+                            <div class="conectord"><div class="circulod"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+        <!-- Tabla de Recursos -->
+    <section id="productos" class="productos">
+       <table class="products-table">
             <tr>
                 <th>Información y Recursos</th>
                 <th>Artículos</th>
-                <th>Guias</th>
+                <th>Guías</th>
                 <th>Soporte</th>
                 <th>Sobre Nosotros</th>
             </tr>
             <tr>
                 <td><a href="novedades.html">Novedades</a></td>
                 <td><a href="welcometop.html">Ranking</a></td>
-                <td><a href="armapc.php">arma tu pc</a></td>
+                <td><a href="armapc.html">Arma tu PC</a></td>
                 <td><a href="formu.html">Formulario</a></td>
                 <td><a href="contacto.html">Contacto</a></td>
             </tr>
             <tr>
                 <td><a href="enlace_a_info_desktop.html"></a></td>
-                <td><a href="graficorank.html">Representaciones graficas</a></td>
+                <td><a href="graficorank.html">Representaciones gráficas</a></td>
                 <td><a href="recomendaciones.html">Tips de mantenimiento</a></td>
-                <td><a href="preguntas.html">Preguntas frecuentes</a></td>
+                <td><a href="#preguntasfrec">Preguntas frecuentes</a></td>
             </tr>
             <tr> <!--Espacio para otras direcciones-->
                 <td><a href="enlace_a_articulo_desktop.html"></a></td>
-                <td><a href="infoprod.html">Componetes recomendados</a></td>
+                <td><a href="#componente">Componetes recomendados</a></td>
                 <td><a href="enlace_a_articulo_minipc.html"></a></td>
                 <td><a href="enlace_a_nosotros.html"></a></td>
             </tr>
             <tr>
                 <td><a href="enlace_a_soporte.html"></a></td>
                 <td><a href="enlace_a_nosotros.html"></a></td>
-                <td><a href="enlace_a_nosotros.html"></a></td>
+                <td><a href="enlace_a_nosotros.html"></a></td>  
             </tr>
         </table>
-        
-    </div>  
+    </section>
+    </div>
+    <footer>
+        <a href="#" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a><section id="redes">
+        <div class="redes">
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=HZcMPCYanIbi7dH3"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </section>
+    </footer>
     <script src="script1.js"></script>   
+    <script>
+        function showModal(title, description, image) {
+     document.getElementById('modal-title').textContent = title;
+     document.getElementById('modal-description').textContent = description;
+     document.getElementById('modal-image').src = image;
+     document.getElementById('modal').style.display = 'flex';
+ }
+ 
+ function closeModal() {
+     document.getElementById('modal').style.display = 'none';
+ }
+ 
+ // Agregar evento para cerrar al hacer clic fuera del modal
+ window.addEventListener('click', function(event) {
+     const modal = document.getElementById('modal');
+     if (event.target === modal) {
+         closeModal();
+     }
+ });
+     </script>
 </body>
-</html> 
+</html>

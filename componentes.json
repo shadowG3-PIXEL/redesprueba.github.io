@@ -1,0 +1,30 @@
+{
+    "procesador": [
+        { "nombre": "Intel Core i5", "precio": 250 },
+        { "nombre": "AMD Ryzen 5", "precio": 200 }
+    ],
+    "tarjeta_grafica": [
+        { "nombre": "NVIDIA GTX 1650", "precio": 300 },
+        { "nombre": "AMD Radeon RX 580", "precio": 280 }
+    ],
+    "ram": [
+        { "nombre": "8GB DDR4", "precio": 100 },
+        { "nombre": "16GB DDR4", "precio": 180 }
+    ],
+    "almacenamiento": [
+        { "nombre": "SSD 256GB", "precio": 50 },
+        { "nombre": "HDD 1TB", "precio": 70 }
+    ],
+    "fuente_poder": [
+        { "nombre": "600W", "precio": 80 },
+        { "nombre": "750W", "precio": 100 }
+    ],
+    "cases": [
+        { "nombre": "Case básico", "precio": 40 },
+        { "nombre": "Case gaming", "precio": 90 }
+    ],
+    "refrigeracion": [
+        { "nombre": "Aire básico", "precio": 30 },
+        { "nombre": "Líquida", "precio": 120 }
+    ]
+}

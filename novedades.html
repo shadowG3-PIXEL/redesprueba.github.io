@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovaciones en Tecnología de PC</title>
-    <link rel="stylesheet" href="cssprinci.css"> 
+    <link rel="stylesheet" href="cssprinci.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Estilo para el modal */
         .modal {
@@ -19,17 +20,25 @@
             background-color: rgb(0,0,0); 
             background-color: rgba(0,0,0,0.4); 
         }
+        h1 {
+    color: #277ca0; /* Cambia el color a un verde */
+}
+h2 {
+    color: #f2a436; /* Cambia el color a un verde */
+}
+
 
         .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto; 
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%; 
-            max-width: 600px;
-            border-radius: 8px;
-        }
-
+    background-color: #fefefe;
+    margin: 3% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 140%; 
+    max-width: 800px; 
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos dentro del modal se alineen verticalmente */
+}
         .close {
             color: #aaa;
             float: right;
@@ -44,13 +53,15 @@
             cursor: pointer;
         }
 
-        .modal img {
-            max-width: 100%; 
-            height: auto; 
-            border-radius: 8px;
-        }
+        
+.modal-image img {
+    width: 110%; /* Asegura que la imagen se ajuste al ancho del modal */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+    margin-top: 10px; /* Espaciado superior entre el título y la imagen */
+}
         .button {
-    background-color: #4CAF50; /* Verde */
+    background-color: #1a479a; /* Verde */
     border: none; /* Sin borde */
     color: white; /* Texto blanco */
     padding: 10px 20px; /* Espaciado interno */
@@ -65,52 +76,66 @@
 }
 
 .button:hover {
-    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+    background-color: #8bbbdf; /* Verde más oscuro al pasar el mouse */
     transform: scale(1.05); /* Efecto de aumento */
+}
+.novedad-card img {
+    width: 460px; /* Ancho fijo */
+    height: 380px; /* Alto fijo */
+    object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsionarse */
+}
+
+p {
+    font-size: 1em; /* Tamaño de fuente más grande */
+    line-height: 1.5; /* Aumento de la altura de línea para mayor legibilidad */
+    color: #333; /* Color de texto oscuro */
 }
 
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <a href="index.html">
-                <img src="listo.jpg" alt="Logo de Tienda de PC">
-            </a>
-        </div>
-        
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="novedades.html">Novedades</a></li>
-            <li>
-                <a href="welcometop.html">Ranking</a>
-                <div class="dropdown-content">
-                    <div class="submenu">
-                        <a href="#">Procesadores</a>
-                        <div class="submenu-content">
-                            <a href="topintel.html">Intel</a>
-                            <a href="topamd.html">AMD</a>
+    <section id="navegacion" class="navegacion">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731462103/2_qyazdq.png" alt="Logo de Tienda de PC">
+                </a>
+            </div>
+            <div class="nombrelogo">
+            </div>
+            <ul>
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>  <!-- funcional -->
+                <li><a style="font-size: 25px; font-weight: 700;"  href="novedades.html"><i>Novedades</i></a></li>
+                <li>
+                    <a style="font-size: 25px; font-weight: 700;"  href="welcometop.html"><i>Ranking</i></a>
+                    <div class="dropdown-content">
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"  href="#">Procesadores</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;"  href="topintel.html">Intel</a>
+                                <a  style="font-size: 25px; font-weight: 700;"  href="topamd.html">AMD</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"href="#">Tarjetas Gráficas</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;"  href="topnvidia.html">NVIDIA</a>
+                                <a style="font-size: 25px; font-weight: 700;"  href="topradeon.html">RADEON</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"  href="#">Laptops</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;" href="toplaptopgamer.html">Gamers</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="submenu">
-                        <a href="#">Tarjetas Gráficas</a>
-                        <div class="submenu-content">
-                            <a href="topnvidia.html">NVIDIA</a>
-                            <a href="topradeon.html">RADEON</a>
-                        </div>
-                    </div>
-                    <div class="submenu">
-                        <a href="#">Laptos</a>
-                        <div class="submenu-content">
-                            <a href="toplaptopgamer.html">Gamers</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li><a href="armapc.html">Arma tu pc</a></li>
-            <li><a href="meme.html">Contacto</a></li>
-        </ul>
-    </nav>
+                </li>
+                <li><a style="font-size: 25px; font-weight: 700;"  href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;"   href="contacto.html"><i>Contacto</i></a></li>
+            </ul>
+        </nav>
+    </section>
     <div class="content">
         <h1>Novedades en Tecnología de PC</h1>
         <p>Bienvenido a nuestra sección de Novedades, donde te mantenemos al día con los últimos lanzamientos y avances en el mundo de la tecnología de PC. Aquí encontrarás reseñas de productos, artículos interesantes y consejos para mejorar tu experiencia informática.</p>
@@ -118,21 +143,21 @@
         <h2>Últimos Lanzamientos</h2>
         <div class="novedades-grid">
             <div class="novedad-card">
-                <img src="IR/novedades/nueva-tarjeta-grafica.jpg" alt="Nueva Tarjeta Gráfica" />
+                <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452856/4090_ai6c5d.jpg" alt="Nueva Tarjeta Gráfica" />
                 <h3>Nueva NVIDIA GeForce RTX 4090</h3>
                 <p>La última tarjeta gráfica de NVIDIA, diseñada para gamers y creadores de contenido. Con un rendimiento sin igual y ray tracing en tiempo real.</p>
                 <button class="button" onclick="openModal('modal-rtx4090')">Leer más</button>
             </div>
     
             <div class="novedad-card">
-                <img src="IR/novedades/nuevo-procesador.jpg" alt="Nuevo Procesador" />
-                <h3>AMD Ryzen 7000 Series</h3>
+                <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452856/AMD-Ryzen-8000-Zen-5-mejoras_y4gftj.jpg" alt="Nuevo Procesador" />
+                <h3>AMD Ryzen 8000 Series</h3>
                 <p>Los nuevos procesadores de AMD ofrecen un salto en rendimiento y eficiencia energética. Ideales para juegos y aplicaciones de alto rendimiento.</p>
                 <button class="button" onclick="openModal('modal-ryzen7000')">Leer más</button>
             </div>
     
             <div class="novedad-card">
-                <img src="IR/novedades/nueva-placa-base.jpg" alt="Nueva Placa Base" />
+                <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452856/ROG-Strix-Z690-E-Gaming_nprymc.jpg" alt="Nueva Placa Base" />
                 <h3>Placa Base ASUS ROG Strix Z690</h3>
                 <p>Construida para gamers, esta placa base ofrece overclocking de alta calidad y conectividad avanzada para tus componentes.</p>
                 <button class="button" onclick="openModal('modal-z690')">Leer más</button>
@@ -165,8 +190,8 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modal-rtx4090')">&times;</span>
                 <h2>Nueva NVIDIA GeForce RTX 4090</h2>
-                <img src="IR/novedades/nueva-tarjeta-grafica.jpg" alt="Nueva Tarjeta Gráfica" />
-                <p>La última tarjeta gráfica de NVIDIA, diseñada para gamers y creadores de contenido. Con un rendimiento sin igual y ray tracing en tiempo real.</p>
+                <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452856/4090_ai6c5d.jpg" alt="Nueva Tarjeta Gráfica" />
+                <p>NVIDIA® GeForce RTX™ 4090 es la GPU GeForce definitiva. Supone un enorme salto en rendimiento, eficiencia y gráficos con tecnología de IA. Disfruta de juegos de alto rendimiento, mundos virtuales con un nivel de detalle increíble, productividad sin precedentes y nuevas formas de crear. Cuenta con la tecnología de la arquitectura NVIDIA Ada Lovelace y dispone de 24 GB de memoria G6X para ofrecer la experiencia definitiva para jugadores y creadores.</p>
             </div>
         </div>
 
@@ -174,8 +199,9 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modal-ryzen7000')">&times;</span>
                 <h2>AMD Ryzen 7000 Series</h2>
-                <img src="IR/novedades/nuevo-procesador.jpg" alt="Nuevo Procesador" />
-                <p>Los nuevos procesadores de AMD ofrecen un salto en rendimiento y eficiencia energética. Ideales para juegos y aplicaciones de alto rendimiento.</p>
+                <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452856/AMD-Ryzen-8000-Zen-5-mejoras_y4gftj.jpg" alt="Nuevo Procesador" />
+                <p>Los procesadores AMD Ryzen Serie 8000G reúnen algunas de las mejores tecnologías de vanguardia de AMD en un único paquete: potencia de procesamiento de alto rendimiento, compatibilidad con gráficos exigentes y la primera NPU en un procesador para PC de escritorio.
+                Estos nuevos procesadores, basados en la potente arquitectura “Zen 4”, ofrecen hasta ocho núcleos y 16 subprocesos, 24 MB de caché total y tarjetas gráficas AMD Radeon™ Serie 700M. La combinación de todo esto en un solo chip ofrece nuevas posibilidades para los clientes en el gaming, en el trabajo y mucho más. Dado que no hay necesidad de adquirir un procesador y una tarjeta gráfica independientes, los clientes podrán invertir menos y disfrutar de un rendimiento mayor y excepcional.</p>
             </div>
         </div>
 
@@ -183,8 +209,8 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modal-z690')">&times;</span>
                 <h2>Placa Base ASUS ROG Strix Z690</h2>
-                <img src="IR/novedades/nueva-placa-base.jpg" alt="Nueva Placa Base" />
-                <p>Construida para gamers, esta placa base ofrece overclocking de alta calidad y conectividad avanzada para tus componentes.</p>
+                <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452856/ROG-Strix-Z690-E-Gaming_nprymc.jpg" alt="Nueva Placa Base" />
+                <p>Tarjeta madre Intel Z690 LGA 1700 ATX con PCIe® 5.0, 18 + 1 fases de poder, DDR5, cancelación de ruido AI bidireccional, WiFi 6E, Intel® 2.5 Gb Ethernet, cinco puertos M.2 con disipadores de calor (incluidos dos en el ROG Hyper incluido M.2), compatibilidad con SSD PCIe® 5.0 NVMe® , disipador combinado M.2, placa posterior M.2, puerto PCIe® Q-Release, USB 3.2 Gen 2x2 Type-C®, iluminación SATA y Aura Sync RGB</p>
             </div>
         </div>
 
@@ -192,8 +218,56 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modal-elegir-tg')">&times;</span>
                 <h2>Cómo Elegir la Tarjeta Gráfica Ideal</h2>
-                <img src="IR/articulos/como-elegir-tg.jpg" alt="Cómo Elegir la Tarjeta Gráfica" />
-                <p>Aprende a seleccionar la tarjeta gráfica que mejor se adapte a tus necesidades y presupuesto. Desde el gaming hasta el diseño gráfico, ¡te lo contamos todo!</p>
+                <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452855/AMD-vs-NVIDIA_zpuyf9.jpg" alt="Cómo Elegir la Tarjeta Gráfica" />
+                <ol>
+                    <h3>¿Qué debo tener en cuenta al elegir una tarjeta gráfica?</h3>
+                    <li>Resolución de pantalla:
+                        <ul>
+                            <li><p>1080p (Full HD): La resolución más común. Una tarjeta gráfica de gama media suele ser suficiente.</p></li>
+                            <li><p>1440p (QHD): Ofrece una imagen más nítida y detallada. Necesitarás una tarjeta gráfica más potente.</p></li>
+                            <li><p>4K: La máxima resolución. Solo las tarjetas gráficas de gama alta pueden manejar juegos en 4K con todos los detalles al máximo.</p></li>
+                        </ul>
+                    </li>
+    
+                    <li>Tasa de fotogramas por segundo (FPS):
+                        <ul>
+                            <li><p>Los FPS determinan la fluidez de la imagen. A mayor FPS, más suave será el movimiento.</p></li>
+                            <li><p>60 FPS: Ideal para una experiencia de juego fluida en la mayoría de los títulos.</p></li>
+                            <li><p>144 FPS o más: Perfecto para jugadores competitivos y monitores de alta frecuencia de actualización.</p></li>
+                        </ul>
+                    </li>
+                    
+                    <li>Compatibilidad y requisitos del sistema:
+                        <ul>
+                            <li>Slot PCI Express: Asegúrate de que tu PC tenga el slot correcto para la tarjeta gráfica que quieres comprar.</li>
+                            <li>Fuente de alimentación: La tarjeta gráfica consume mucha energía. Verifica que tu fuente de alimentación tenga suficiente potencia.</li>
+                            <li>Controladores: Instala los controladores más recientes para obtener el máximo rendimiento.</li>
+                        </ul>
+                    </li>
+                    
+                    <li>Memoria de video (VRAM):
+                        <ul>
+                            <li>La VRAM es la memoria exclusiva de la tarjeta gráfica. A mayor VRAM, más texturas y detalles puede cargar un juego.</li>
+                            <li> 4GB a 6GB: Suficiente para la mayoría de los juegos en 1080p.</li>
+                            <li>8GB o más: Ideal para juegos en 1440p y 4K, o si quieres jugar con todos los detalles al máximo.</li>
+                        </ul>
+                    </li>
+                   
+                    <li>Presupuesto:
+                        <ul>
+                            <li>Gama baja: Perfecta para juegos casuales en 1080p.</li>
+                            <li>Gama media: Ideal para juegos AAA en 1080p y algunos en 1440p.</li>
+                            <li>Gama alta: Para jugadores exigentes que buscan la máxima calidad gráfica en 4K y altas tasas de FPS.</li>
+                        </ul>
+                    </li>
+                    
+                    <li>Marcas y modelos recomendados:
+                        <ul>
+                            <li>NVIDIA: Líder en el mercado de tarjetas gráficas. Modelos populares: RTX 3060, RTX 4060, RTX 4090.</li>
+                            <li>AMD: Ofrece una excelente relación calidad-precio. Modelos populares: Radeon RX 6600 XT, Radeon RX 6700 XT.</li>
+                        </ul>
+                    </li>
+                </ol>
             </div>
         </div>
 
@@ -201,8 +275,54 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modal-tendencias-refrigeracion')">&times;</span>
                 <h2>Tendencias en Refrigeración para PC</h2>
-                <img src="IR/articulos/tendencias-refrigeracion.jpg" alt="Tendencias en Refrigeración" />
-                <p>Descubre las últimas tendencias en sistemas de refrigeración y cómo pueden mejorar el rendimiento de tu PC.</p>
+                <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452856/refri_ficcyo.jpg" alt="Tendencias en Refrigeración" />
+                <h3>¿Quieres que tu PC rinda al máximo y dure más?</h3><p> La refrigeración es clave. Imagina tu PC como un motor de carreras: si se sobrecalienta, pierde potencia y puede dañarse. En este artículo, te explicaremos todo lo que necesitas saber sobre los sistemas de enfriamiento para tu ordenador y cómo elegir el mejor para ti.</p>
+                    <h3>¿Por qué es tan importante la refrigeración?</h3>   
+                    <h4>Una buena refrigeración es esencial para:</h4>
+                        <ul>
+                            <li>Mantener las temperaturas bajo control: Evita que los componentes se dañen por el exceso de calor.</li>
+                            <li>Mejorar el rendimiento: Un PC frío funciona más rápido y de manera más estable.</li>
+                            <li>Reducir el ruido: Los ventiladores más silenciosos hacen que tu experiencia de juego sea más agradable.</li>
+                            <li>Prolongar la vida útil: Al proteger los componentes del calor, prolongas la vida útil de tu PC.</li>
+                        </ul>
+                    <h3>Tipos de refrigeración</h3>      
+                    <h4>Una buena refrigeración es esencial para:</h4>
+                        <ul>
+                            <li>Refrigeración por aire: Es la más común y económica. Utiliza ventiladores para disipar el calor de los componentes.</li>
+                                <ul>
+                                    <li>Ventajas: Fácil de instalar y mantener, amplia variedad de opciones y precios.</li>
+                                    <li>Desventajas: Puede ser menos eficiente en sistemas de alto rendimiento o en ambientes cálidos.</li>
+                                </ul>
+                            <li>Refrigeración líquida: Utiliza un circuito cerrado con líquido para transportar el calor desde los componentes.</li>
+                                <ul>
+                                    <li>Ventajas: Mayor eficiencia, menor ruido y temperaturas más bajas.</li>
+                                    <li> Desventajas: Más cara de instalar y requiere más mantenimiento.</li>
+                                </ul>
+                        </ul>
+                    <h3>Nuevas tecnologías en refrigeración</h3>  
+                    <h4>El mundo de la refrigeración está en constante evolución. Algunas de las tendencias más recientes incluyen:</h4>
+                        <ul>
+                            <li> Sistemas híbridos: Combinan lo mejor de ambos mundos, ofreciendo un buen equilibrio entre rendimiento y precio.</li>
+                            <li> Cámaras de vapor: Utilizan el principio de la evaporación para disipar el calor de manera más eficiente.</li>
+                            <li> Ventiladores ARGB: Además de enfriar, añaden un toque de estilo a tu PC con iluminación personalizable.</li>
+                            <li>Soluciones de ventilación avanzadas: Diseños de chasis con mejor flujo de aire y materiales de alta calidad.</li>
+                        </ul>
+                    <h3>¿Cómo elegir el sistema de refrigeración adecuado?</h3>
+                    <h4>Al elegir un sistema de refrigeración, considera los siguientes factores:</h4>
+                        <ul>
+                            <li>Presupuesto: Los sistemas de refrigeración líquida suelen ser más caros que los de aire.</li>
+                            <li> Rendimiento: Si haces overclocking o juegas con gráficos exigentes, necesitarás un sistema más potente.</li>
+                            <li>Ruido: Si priorizas la tranquilidad, busca ventiladores silenciosos o sistemas de refrigeración líquida.</li>
+                            <li>Estética: Algunos sistemas de refrigeración tienen diseños llamativos que pueden mejorar la apariencia de tu PC.</li>
+                        </ul>
+                    <h3>Consejos prácticos para el mantenimiento</h3>    
+                    <h4>Para mantener tu sistema de refrigeración en óptimas condiciones:</h4>
+                        <ul>
+                            <li>Limpia los ventiladores regularmente: El polvo puede obstruir los ventiladores y reducir su eficiencia.</li>
+                            <li>Cambia la pasta térmica cada cierto tiempo: La pasta térmica pierde sus propiedades con el tiempo.</li>
+                            <li>Verifica las temperaturas: Utiliza software de monitorización para controlar las temperaturas de tu PC.</li>
+                            <li>Asegúrate de que el flujo de aire sea adecuado: Evita obstruir las entradas y salidas de aire de tu chasis.</li>
+                        </ul>
             </div>
         </div>
 
@@ -210,8 +330,31 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modal-consejos')">&times;</span>
                 <h2>5 Consejos para Optimizar tu PC</h2>
-                <img src="IR/articulos/consejos-optimizar-pc.jpg" alt="Consejos para Optimizar tu PC" />
-                <p>Conoce algunos consejos prácticos para mejorar la velocidad y rendimiento de tu computadora. ¡No te los pierdas!</p>
+                <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452856/opt_wpzvox.jpg" alt="Consejos para Optimizar tu PC" />
+                <p>¿Quieres que tus juegos favoritos corran más fluidos y con mejores gráficos? ¡Optimizar tu PC es la clave! Aunque parezca complicado, 
+                    con unos pocos ajustes puedes mejorar significativamente tu experiencia de juego. Aquí te dejamos 5 consejos fáciles de seguir:</p>
+                <h3>Mantén actualizados los controladores de tu tarjeta gráfica</h3>
+                <p>Imagina que tu tarjeta gráfica es un auto de carreras. Los controladores son como las actualizaciones de software que hacen que el 
+                    auto vaya más rápido y de manera más eficiente. Al mantenerlos actualizados, estarás aprovechando al máximo el potencial de tu hardware.</p>
+                <ul><li>¿Cómo hacerlo? Visita la página web del fabricante de tu tarjeta gráfica (NVIDIA o AMD) y descarga los controladores más recientes.</li></ul>
+                <h3>Cierra programas que no estés usando</h3>
+                <p>¿Alguna vez has notado que tu PC va más lento cuando tienes muchas pestañas abiertas en el navegador? Esto se debe a que cada programa 
+                    consume recursos del sistema. Al cerrar los programas que no estés utilizando, liberarás memoria y CPU para que tus juegos funcionen mejor.</p>
+                <h3>Ajusta la configuración gráfica de tus juegos</h3>
+                <p>Cada juego tiene una configuración gráfica que te permite personalizar la experiencia visual. Si tu PC no es muy potente, puedes reducir 
+                    algunos ajustes como la resolución, la calidad de las texturas o los efectos especiales para ganar rendimiento. ¡Experimenta y encuentra 
+                    el equilibrio perfecto entre calidad visual y rendimiento!</p>
+                <h3>Limpia tu PC por dentro y por fuera</h3>
+                <p>Al igual que un auto necesita mantenimiento, tu PC también. Con el tiempo, se acumula polvo en el interior, 
+                    lo que puede obstruir los ventiladores y causar sobrecalentamiento. Además, los archivos temporales y la fragmentación del disco pueden ralentizar el sistema.</p>
+                    <ul><li>¿Cómo hacerlo? Desconecta tu PC, abre la caja y utiliza aire comprimido para eliminar el polvo. Luego, utiliza herramientas del sistema operativo 
+                        para limpiar archivos temporales y desfragmentar el disco.</li></ul>
+                <h3>Asegura una buena ventilación</h3>
+                <p>El sobrecalentamiento es uno de los principales enemigos de los componentes de tu PC. Una buena ventilación es esencial para mantener las temperaturas bajo control.</p>
+                <ul><li>¿Cómo hacerlo? Asegúrate de que tu PC tenga suficiente espacio alrededor para que el aire circule libremente. Limpia los ventiladores regularmente y considera agregar
+                     ventiladores adicionales si es necesario.</li></ul>
+                <h4>¡Con estos sencillos consejos, podrás disfrutar de tus juegos favoritos con un rendimiento óptimo!</h4>
+                <h4>Recuerda: Si no te sientes cómodo realizando alguna de estas acciones, puedes consultar a un técnico especializado.</h4>
             </div>
         </div>
     </div>  
@@ -236,5 +379,16 @@
             }
         }
     </script>
+    <footer>
+        <a href="#" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a><section id="redes">
+        <div class="redes">
+            <a href="https://youtu.be/dQw4w9WgXcQ?si=HZcMPCYanIbi7dH3"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </section>
+    </footer>
+    <script src="script1.js"></script>  
 </body>
 </html>

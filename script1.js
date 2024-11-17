@@ -23,4 +23,4 @@ document.getElementById('prevBtn').addEventListener('click', () => {
 });
 
 // Cambiar automáticamente la imagen cada 3 segundos
-setInterval(nextImage, 3000);
+setInterval(nextImage, 5000);

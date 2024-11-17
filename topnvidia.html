@@ -6,49 +6,53 @@
     <title>Innovaciones en Tecnología de PC</title>
     <link rel="stylesheet" href="cssprinci.css"> 
     <link rel="stylesheet" href="rank.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="listo.jpg" alt="Logo de Tienda de PC">
-        </div>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>  <!-- funcional  -->
-            <li>
-                <a href="novedades.html">Novedades</a>
-            </li>
-            <li>
-                <a href="welcometop.html">Ranking</a>
-                <div class="dropdown-content">
-                    <div class="submenu">
-                        <a href="#">Procesadores</a>
-                        <div class="submenu-content">
-                            <a href="topintel.html">Intel</a>
-                            <a href="topamd.html">AMD</a>
+    <section id="navegacion" class="navegacion">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731462103/2_qyazdq.png" alt="Logo de Tienda de PC">
+                </a>
+            </div>
+            <div class="nombrelogo">
+            </div>
+            <ul>
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>  <!-- funcional -->
+                <li><a style="font-size: 25px; font-weight: 700;"  href="novedades.html"><i>Novedades</i></a></li>
+                <li>
+                    <a style="font-size: 25px; font-weight: 700;"  href="welcometop.html"><i>Ranking</i></a>
+                    <div class="dropdown-content">
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"  href="#">Procesadores</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;"  href="topintel.html">Intel</a>
+                                <a  style="font-size: 25px; font-weight: 700;"  href="topamd.html">AMD</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"href="#">Tarjetas Gráficas</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;"  href="topnvidia.html">NVIDIA</a>
+                                <a style="font-size: 25px; font-weight: 700;"  href="topradeon.html">RADEON</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <a style="font-size: 25px; font-weight: 700;"  href="#">Laptops</a>
+                            <div class="submenu-content">
+                                <a style="font-size: 25px; font-weight: 700;" href="toplaptopgamer.html">Gamers</a>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="submenu">
-                        <a href="#">Tarjetas Gráficas</a>
-                        <div class="submenu-content">
-                            <a href="topnvidia.html">NVIDIA</a>
-                            <a href="topradeon.html">RADEON</a>
-                        </div>
-                    </div>
-                    <div class="submenu">
-                        <a href="#">Laptos</a>
-                        <div class="submenu-content">
-                            <a href="toplaptopgamer.html">Gamers</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li><a href="armapc.html">Arma tu pc</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+                </li>
+                <li><a style="font-size: 25px; font-weight: 700;"  href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;"   href="contacto.html"><i>Contacto</i></a></li>
+            </ul>
+        </nav>
+    </section>
     <div class="content">
-        <h1>Top Tarjetas Gráficas Nvidia</h1>
+        <h1 class="titulo-nvidia">Top Tarjetas Gráficas Nvidia</h1>
         <table>
             <thead>
                 <tr>
@@ -59,17 +63,17 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><img src="IR/graficas/nvidia/rtx-4060.jpg" height="200" width="200"></td>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452854/RTX_4070RTX_jbmyvi.jpg" height="200" width="200"></td>
                     <td>ASUS Dual GeForce RTX 4060</td>
                     <td>2420 Bs.</td>
                 </tr>
                 <tr>
-                    <td><img src="IR/graficas/nvidia/RTX 4060TI.jpg" height="200" width="200"></td>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452854/RTX_4060TI_qcvlmg.jpg" height="200" width="200"></td>
                     <td>Tarjeta Gráfica Asus Dual GeForce RTX 4060 Ti</td>
                     <td>3480 Bs.</td>
                 </tr>
                 <tr>
-                    <td><img src="IR/graficas/nvidia/RTX 4070RTX.jpg" height="200" width="200"></td>
+                    <td><img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731452854/rtx-4060_tyypzv.jpg" height="200" width="200"></td>
                     <td>Tarjeta Gráfica Asus Dual GeForce RTX 4070</td>
                     <td>4020 Bs.</td>
                 </tr>
@@ -78,4 +82,14 @@
     </div>  
     <script src="script1.js"></script>   
 </body>
+<footer>
+    <a href="#" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+    </a><section id="redes">
+    <div class="redes">
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=HZcMPCYanIbi7dH3"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+</section>
+</footer>
 </html> 
