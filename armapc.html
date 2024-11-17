@@ -11,48 +11,53 @@
 </head>
 
 <body>
-    <section id="navegacion" class="navegacion">
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731462103/2_qyazdq.png" alt="Logo de Tienda de PC">
-                </a>
-            </div>
-            <div class="nombrelogo">
-            </div>
-            <ul>
-                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>  <!-- funcional -->
-                <li><a style="font-size: 25px; font-weight: 700;"  href="novedades.html"><i>Novedades</i></a></li>
-                <li>
-                    <a style="font-size: 25px; font-weight: 700;"  href="welcometop.html"><i>Ranking</i></a>
-                    <div class="dropdown-content">
-                        <div class="submenu">
-                            <a style="font-size: 25px; font-weight: 700;"  href="#">Procesadores</a>
-                            <div class="submenu-content">
-                                <a style="font-size: 25px; font-weight: 700;"  href="topintel.html">Intel</a>
-                                <a  style="font-size: 25px; font-weight: 700;"  href="topamd.html">AMD</a>
-                            </div>
-                        </div>
-                        <div class="submenu">
-                            <a style="font-size: 25px; font-weight: 700;"href="#">Tarjetas Gráficas</a>
-                            <div class="submenu-content">
-                                <a style="font-size: 25px; font-weight: 700;"  href="topnvidia.html">NVIDIA</a>
-                                <a style="font-size: 25px; font-weight: 700;"  href="topradeon.html">RADEON</a>
-                            </div>
-                        </div>
-                        <div class="submenu">
-                            <a style="font-size: 25px; font-weight: 700;"  href="#">Laptops</a>
-                            <div class="submenu-content">
-                                <a style="font-size: 25px; font-weight: 700;" href="toplaptopgamer.html">Gamers</a>
-                            </div>
+   <section id="navegacion" class="navegacion">
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731462103/2_qyazdq.png" alt="Logo de Tienda de PC">
+            </a>
+        </div>
+        <div class="nombrelogo">
+            <!-- Puedes añadir un título o subtítulo aquí si lo deseas -->
+        </div>
+        <!-- Botón para dispositivos móviles -->
+        <span class="menu-toggle">☰</span>
+        <!-- Menú de navegación -->
+        <ul>
+            <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>
+            <li><a style="font-size: 25px; font-weight: 700;" href="novedades.html"><i>Novedades</i></a></li>
+            <li>
+                <a style="font-size: 25px; font-weight: 700;" href="welcometop.html"><i>Ranking</i></a>
+                <div class="dropdown-content">
+                    <div class="submenu">
+                        <a style="font-size: 25px; font-weight: 700;" href="#">Procesadores</a>
+                        <div class="submenu-content">
+                            <a style="font-size: 25px; font-weight: 700;" href="topintel.html">Intel</a>
+                            <a style="font-size: 25px; font-weight: 700;" href="topamd.html">AMD</a>
                         </div>
                     </div>
-                </li>
-                <li><a style="font-size: 25px; font-weight: 700;"  href="armapc.html"><i>Arma tu pc</i></a></li>
-                <li><a style="font-size: 25px; font-weight: 700;"   href="contacto.html"><i>Contacto</i></a></li>
-            </ul>
-        </nav>
-    </section>
+                    <div class="submenu">
+                        <a style="font-size: 25px; font-weight: 700;" href="#">Tarjetas Gráficas</a>
+                        <div class="submenu-content">
+                            <a style="font-size: 25px; font-weight: 700;" href="topnvidia.html">NVIDIA</a>
+                            <a style="font-size: 25px; font-weight: 700;" href="topradeon.html">RADEON</a>
+                        </div>
+                    </div>
+                    <div class="submenu">
+                        <a style="font-size: 25px; font-weight: 700;" href="#">Laptops</a>
+                        <div class="submenu-content">
+                            <a style="font-size: 25px; font-weight: 700;" href="toplaptopgamer.html">Gamers</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a style="font-size: 25px; font-weight: 700;" href="armapc.html"><i>Arma tu pc</i></a></li>
+            <li><a style="font-size: 25px; font-weight: 700;" href="contacto.html"><i>Contacto</i></a></li>
+        </ul>
+    </nav>
+</section>
+
     
 
     <div class="content">
@@ -139,6 +144,10 @@
             document.getElementById("pc-config-form").reset();
             document.getElementById("precio-total").textContent = "";
         }
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.navegacion .navbar ul').classList.toggle('show');
+});
+
     </script>
 </body>
 <footer>
