@@ -1,37 +1,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+/* Reset general */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo base del cuerpo */
 body {
-    font-family: Roboto, Arial;
-    font-size: 25px;
-    background-color: #ffffff; /* Fondo gris muy claro */
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 25px; /* Tamaño base */
+    background-color: #ffffff; /* Fondo blanco */
     color: #2c3e50; /* Color de texto oscuro */
 }
 
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+    body {
+        font-size: 22px; /* Reducir el tamaño de fuente en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 20px; /* Reducir más el tamaño de fuente en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 18px; /* Tamaño más pequeño para dispositivos móviles */
+    }
+}
+
+/* Estilo del logo de texto */
+/* Estilo del logo de texto */
+.logo-texto {
+    font-family: 'Poppins', sans-serif; /* Fuente redondeada */
+    font-size: 25px; /* Ajusta el tamaño del texto */
+    font-weight: bolder; /* Aumenta el grosor del texto */
+    color: #ffffff; /* Color del texto */
+    background: linear-gradient(to left, #ff0800, #9500ff); /* Degradado de colores */
+    -webkit-background-clip: text; /* Esto hace que el fondo se aplique solo al texto */
+    background-clip: text;
+    text-decoration: none; /* Elimina el subrayado del texto */
+    padding: 10px 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave para el cambio */
+    
+    /* Borde con animación de colores */
+    border: 4px solid;
+    border-image: linear-gradient(to right, red, yellow, green, cyan, blue, magenta);
+    border-image-slice: 1;
+    animation: borderAnimation 5s ease-in-out infinite; /* Transición más suave con ease-in-out */
+    
+    /* Subrayado */
+    text-decoration: underline; /* Agrega el subrayado */
+    text-underline-offset: 8px; /* Ajusta la distancia entre el texto y el subrayado */
+    text-decoration-thickness: 3px; /* Aumenta el grosor del subrayado */
+}
+
+/* Efecto al pasar el mouse */
+.logo-texto:hover {
+    color: #ffffff;
+    transform: scale(1.15); /* Aumenta el tamaño del texto */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Efecto de resplandor */
+}
+
+/* Animación para mover el borde de colores */
+@keyframes borderAnimation {
+    0% {
+        border-image-source: linear-gradient(to right, red, yellow, green, cyan, blue, magenta); /* Estado inicial */
+    }
+    40% {
+        border-image-source: linear-gradient(to right, red, yellow, green, cyan, blue, magenta); /* Suavizar transición */
+    }
+    50% {
+        border-image-source: linear-gradient(to right, magenta, blue, cyan, green, yellow, red); /* Cambio intermedio */
+    }
+    60% {
+        border-image-source: linear-gradient(to right, magenta, blue, cyan, green, yellow, red); /* Mantener el cambio */
+    }
+    100% {
+        border-image-source: linear-gradient(to right, red, yellow, green, cyan, blue, magenta); /* Regreso al estado inicial */
+    }
+}
+
+
+/* Estilos para la barra de navegación */
 .navegacion .navbar {
     background: linear-gradient(to left, #ff0800, #9500ff);
-    color: #3d3838; /* Color de texto oscuro */
+    color: #3d3838;
     position: fixed;
     font-size: 25px;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1000; /* Aseguramos que el navbar esté encima del contenido */
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Espacio entre logo y opciones */
+    justify-content: space-between;
     padding: 15px 30px;
     height: 70px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-
 .navegacion .navbar .logo img {
     margin-top: 10px;
-    height: 100px;
+    height: 60px; /* Reducir el tamaño del logo */
     transition: transform 0.8s ease;
 }
 
@@ -42,46 +117,148 @@ body {
 .navegacion .navbar ul {
     list-style-type: none;
     display: flex;
-    align-items: center; /* Centrar verticalmente las opciones */
-    padding: 0; /* Eliminar padding */
+    align-items: center;
+    padding: 0;
 }
 
 .navegacion .navbar ul li {
     position: relative;
-    margin-left: 20px; /* Espaciado entre los elementos del menú */
+    margin-left: 20px;
 }
 
 .navegacion .navbar ul li a {
-    color: #ffffff; /* Color de texto negro */
+    color: #ffffff;
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
     display: block;
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-/*BOTONES COLORES NAVEGACION TOMAR EN CUENTA*/
 .navbar ul li a:hover {
-    background: linear-gradient(to left, #801e1b, #410b61);/* Color verde brillante en hover */
+    background: linear-gradient(to left, #801e1b, #410b61);
     transform: translateY(-3px);
 }
 
-/*COmments COMENTARIOS DE LA GENTE */
-.coments {
-    background: linear-gradient(to right, #da3b2d, #7710c1);
-    padding: 50px 20px;
-    display: flex; /* Establece el layout en fila */
-    flex-direction: row; /* Asegura que los elementos se alineen horizontalmente */
-    justify-content: flex-start; /* Alinea los elementos al inicio de la fila */
-    align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
-    overflow: hidden; /* Asegura que no sobresalgan elementos fuera del borde redondeado */
+/* Estilos para el botón hamburguesa */
+.hamburger {
+    background: linear-gradient(to left, #a28813e9, #9628e5); /* Degradado de colores (rojo a morado) */
+    border: none;
+    color: white;
+    font-size: 30px; /* Reducir el tamaño de la fuente */
+    cursor: pointer;
+    display: none; /* Por defecto, no visible */
+    position: absolute;
+    top: 50%; /* Centrar verticalmente */
+    right: -5px; /* Ajustar la posición a la derecha */
+    transform: translateY(-50%); /* Asegura que se centre verticalmente */
+    padding: 8px 18px; /* Reducir solo el espaciado vertical */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra más sutil */
+}
+
+
+
+/* Efecto cuando se presiona el botón hamburguesa */
+/* Efecto cuando se presiona el botón hamburguesa */
+.hamburger:active {
+    background: linear-gradient(to right, #9500ff,#ff0800); /* Degradado al presionar */
+}
+
+/* Menú móvil */
+.mobile-menu {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Menú fijo en la parte superior */
+    top: 70px; /* Para que se posicione debajo del navbar */
+    left: 0;
+    background: linear-gradient(to right, #9500ff,#ff0800); /* Degradado de colores */
+    width: 100%;
+    padding: 10px;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out; /* Animación para deslizar el menú */
+    transform: translateY(-100%); /* Menú oculto fuera de la pantalla */
+}
+
+.mobile-menu.open {
+    transform: translateY(0); /* Menú visible (desliza hacia abajo) */
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.mobile-menu ul li {
+    margin: 15px 0;
+}
+
+.mobile-menu ul li a {
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 700;
+    background: linear-gradient(to left, #ff0800, #9500ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu ul li a:hover {
+    color: white;
+    background: linear-gradient(to left, #801e1b, #410b61);
+    transform: translateY(-3px);
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Reducir tamaño del logo de texto en dispositivos móviles */
+    .logo-texto {
+        font-size: 18px; /* Reducir más el tamaño de texto en móviles */
+    }
+    .navegacion .navbar ul {
+        display: none; /* Ocultar el menú principal */
+    }
+
+    .hamburger {
+        font-size: 40px; /* Aumentar el tamaño de la fuente en móviles */
+        display: block; /* Mostrar el botón en móviles */
+    }
+
+    /* Menú móvil inicialmente oculto */
+    .mobile-menu {
+        display: block;
+    }
+
+    /* Centrar las opciones del menú móvil */
+    .mobile-menu ul {
+        text-align: center;
+    }
     
 }
 
-.coments .contenido-seccion{
+/* Ajustes para cuando el menú está abierto */
+.open .hamburger {
+    transform: rotate(90deg); /* Rotación del botón hamburguesa */
+}
+
+/* Para garantizar que el contenido no se mueva cuando el menú se despliega */
+body.menu-open .content {
+    transform: translateY(250px); /* Asegurar que el contenido no se desplace */
+}
+/* COmments - COMENTARIOS DE LA GENTE */
+.coments {
+    background: linear-gradient(to right, #da3b2d, #7710c1);
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.coments .contenido-seccion {
     max-width: 1100px;
     margin: auto;
 }
@@ -89,19 +266,22 @@ body {
 .coments h2 {
     font-size: 48px;
     font-family: 'Arial', sans-serif;
-    text-align: left;
+    text-align: center; /* Centrar el título */
     padding: 20px 0;
 }
 
 .coments .fila {
     display: flex;
-    justify-content: space-between; /* Corregido a "space-between" */
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten automáticamente */
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px; /* Espacio entre columnas en pantallas pequeñas */
 }
 
 .coments .fila .col {
     width: 49%;
     padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .coments .fila .col h3 {
@@ -115,7 +295,7 @@ body {
 }
 
 .coments .fila .derecha {
-    border-left:  2px solid #a200ff;
+    border-left: 2px solid #a200ff;
 }
 
 .coments .fila .item {
@@ -123,7 +303,7 @@ body {
     margin-bottom: 30px;
     background-color: rgb(71, 37, 165);
     position: relative;
-    border-radius: 30px; /* Bordes redondeados en los elementos */
+    border-radius: 30px;
 }
 
 .coments .fila .item h4 {
@@ -148,57 +328,55 @@ body {
     line-height: 24px;
 }
 
-.coments .fila .izq {
-    border-left: 2px solid #a200ff;
-    margin-right: 20px;
+/* Media Query para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .coments h2 {
+        font-size: 36px; /* Reducir el tamaño del título */
+    }
+
+    .coments .fila .col {
+        width: 100%; /* Cambiar a una sola columna */
+        padding: 10px; /* Reducir padding */
+    }
+
+    .coments .fila {
+        gap: 10px; /* Reducir el espacio entre columnas */
+    }
+
+    .coments .fila .izquierda, 
+    .coments .fila .derecha {
+        border: none; /* Quitar bordes para simplificar en pantallas pequeñas */
+    }
+
+    .coments .fila .item {
+        padding: 20px; /* Reducir padding de los items */
+    }
+
+    .coments .fila .item h4 {
+        font-size: 18px; /* Reducir el tamaño de los subtítulos */
+    }
 }
 
-.coments .fila .der {
-    border-right: 2px solid #a200ff;
-    margin-left: 20px;
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .coments h2 {
+        font-size: 28px; /* Ajustar título para móviles */
+    }
+
+    .coments {
+        padding: 20px 10px; /* Reducir padding general */
+    }
+
+    .coments .fila {
+        gap: 10px; /* Espacio reducido entre elementos */
+    }
+
+    .coments .fila .item {
+        padding: 15px; /* Reducir padding en items */
+        font-size: 16px; /* Ajustar tamaño de texto en los items */
+    }
 }
 
-.coments .fila .item .conectori {
-    height: 2px;
-    background-color: #a200ff;
-    width: 47px;
-    position: absolute;
-    top: 50%;
-    right: -47px;
-    z-index: 5;
-}
-
-.coments .fila .item .conectori .circuloi {
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #a200ff;
-    float: right;
-    position: relative;
-    bottom: 4px;
-}
-
-.coments .fila .item .conectord {
-    height: 2px;
-    background-color: #a200ff;
-    width: 47px;
-    position: absolute;
-    top: 50%;
-    left: -47px;
-    z-index: 5;
-}
-
-.coments .fila .item .conectord .circulod {
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #a200ff;
-    float: left;
-    position: relative;
-    bottom: 4px;
-}
 
 /*carrusel*/
 .carrusel {
@@ -208,49 +386,118 @@ body {
     background-repeat: no-repeat;
     padding: 50px 20px;
 }
-
+/* Estilo base para empinfo */
 .empinfo {
     background: linear-gradient(to top, rgba(23, 42, 58, 0.8), rgba(34, 53, 77, 1)), 
     url(gaming2.jpg);
     background-size: cover;
     font-family: cursive;
-    padding: 100px 250px;
+    padding: 100px 250px; /* Espaciado grande */
     box-sizing: border-box;
+    color: #ffffff; /* Texto blanco para mayor contraste */
 }
-/*TITULO INNOVACOMPUTECH*/
+
+/* Estilo para el título */
 .empinfo .company-info h2 {
-    color: #e95959; /* Color del título en azul brillante */
-    
+    color: #e95959; /* Color del título */
+    font-size: 3.5em; /* Tamaño grande */
+    text-align: center; /* Alinear título al centro */
 }
-/*INNOVA TEXTO*/
+
+/* Estilo para el texto */
 .empinfo .company-info p {
-    color: #d4ced7; /* Color del texto en gris claro */
-    font-family: "a r i a l", serif;
-    margin-bottom: 40px; /* Añade espacio entre el texto y el video */
-    font-size: 1.6em;
+    color: #d4ced7; /* Color del texto */
+    font-family: "arial", serif;
+    margin-bottom: 40px;
+    font-size: 1.6em; /* Tamaño de fuente más grande */
+    text-align: center; /* Alinear texto al centro */
+}
+@media (max-width: 768px) {
+    .empinfo {
+        padding: 60px 50px; /* Reducir el espaciado para dispositivos más pequeños */
+    }
+
+    .empinfo .company-info h2 {
+        font-size: 2.5em; /* Reducir tamaño de título */
+    }
+
+    .empinfo .company-info p {
+        font-size: 1.2em; /* Reducir tamaño del texto */
+    }
+
+    .video-container iframe {
+        width: 100%; /* Hacer que el video ocupe el 100% del contenedor */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .empinfo {
+        padding: 40px 20px; /* Reducir el espaciado para pantallas muy pequeñas */
+    }
+
+    .empinfo .company-info h2 {
+        font-size: 2em; /* Reducir el tamaño del título */
+        text-align: center; /* Centrar el título */
+    }
+
+    .empinfo .company-info p {
+        font-size: 1.1em; /* Reducir tamaño del texto */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .video-container iframe {
+        width: 100%; /* Hacer que el video ocupe todo el ancho */
+        height: auto;
+    }
 }
 
 
-/*IMAGENES ADICIONALES*/
-.adicionalimg{
+/* IMAGENES ADICIONALES */
+.adicionalimg {
     background: linear-gradient(to right, #da3b2d, #7710c1);
-    padding: 100px 250px;
+    padding: 50px 20px; /* Ajustar el padding para pantallas pequeñas */
     box-sizing: border-box;
 }
 
 .adicionalimg .image-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
     gap: 20px; /* Espacio entre imágenes */
 }
 
 .adicionalimg .image-grid img {
-    width: 100%; /* Hacer que las imágenes ocupen todo el ancho del contenedor */
-    height: 300px; /* Establecer una altura fija */
-    object-fit: cover; /* Ajusta las imágenes sin deformarlas, cubriendo el área completa del contenedor */
+    width: 100%; /* Asegurar que las imágenes ocupen el ancho completo */
+    height: auto; /* Altura automática para mantener la proporción */
+    object-fit: cover; /* Ajusta las imágenes sin deformarlas */
     border-radius: 5px; /* Bordes redondeados */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
+
+/* Media Query para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .adicionalimg .image-grid {
+        grid-template-columns: 1fr; /* Cambiar a una sola columna */
+        gap: 15px; /* Reducir el espacio entre imágenes */
+    }
+
+    .adicionalimg {
+        padding: 30px 15px; /* Reducir el padding */
+    }
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    .adicionalimg .image-grid {
+        grid-template-columns: 1fr; /* Mantener una sola columna */
+        gap: 10px; /* Reducir aún más el espacio */
+    }
+
+    .adicionalimg {
+        padding: 20px 10px; /* Padding mínimo para pantallas pequeñas */
+    }
+}
+
 /*PREGUNTAS FRECUENTES*/
 .preguntasfrec {
     display: flex;
@@ -322,7 +569,7 @@ body {
 .faq h2 {
     font-size: 28px;
     font-weight: 700;   
-    color: #000000; /* Color oscuro para el título */
+    color: #000000 ; /* Color oscuro para el título */
     margin-bottom: 10px;
     cursor: pointer;
 }
@@ -354,23 +601,94 @@ body {
 
 
 
-/*PRODUCTOS*/
-.productos{
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to left, #da3b2d, #7710c1);
-    padding: 50px 20px;
-    box-sizing: border-box;    
+
+
+/* Sección de Productos */
+.productos {
+    background: linear-gradient(135deg, #da3b2d, #7710c1);
+    padding: 20px 0;
 }
 
-.productos .additional-images {
-    margin-top: 40px; /* Espacio superior */
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-.productos .content {
-    padding: 20px; /* Espaciado reducido */
-    margin-top: 80px; /* Ajustar margen superior para que no tape las imágenes */
+.products-table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    border-collapse: collapse;
 }
+
+.products-table th {
+    background: rgba(119, 16, 193, 0.1);
+    color: #ffffff !important;
+    padding: 12px; /* Aumenta el padding si lo deseas más grande */
+    font-size: 1.2em !important; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Hace la fuente más gruesa */
+    text-align: left;
+}
+
+.products-table td {
+    padding: 6px 8px;
+    font-size: 1em; /* Aumentar el tamaño de la fuente en las celdas */
+}
+
+.products-table a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.products-table a:hover {
+    color: #7710c1;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .fila {
+        grid-template-columns: 1fr; /* Hacer que la grilla sea de una sola columna */
+        gap: 10px;
+    }
+
+    .item {
+        padding: 10px;
+        font-size: 1em; /* Ajustar el tamaño de texto para mejor legibilidad */
+    }
+
+    .products-table {
+        width: 100%; /* Asegurar que la tabla ocupe todo el ancho disponible */
+        font-size: 0.5em; /* Tamaño de la fuente ajustado */
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 10px; /* Ajuste de padding para mayor espacio en las celdas */
+        font-size: 1.1em; /* Aumentar tamaño de fuente en pantallas de tabletas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenido-seccion h2 {
+        font-size: 1.5em; /* Aumentar tamaño del encabezado */
+    }
+
+    .item {
+        padding: 8px;
+        font-size: 1.1em; /* Aumentar tamaño de texto */
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 8px; /* Ajustar padding */
+        font-size: 1em; /* Aumentar tamaño de fuente para mejor legibilidad */
+    }
+}
+
+
+
 
 /* ESTO SE ENCARGA DEL CSSS DE LOS MENUS DESPLEGABLES*/
 .dropdown-content {
@@ -430,7 +748,7 @@ body {
         transform: translateY(0);
     }
 }
-
+/* Estilo principal del contenido */
 .content {
     padding: 40px;
     margin-top: 70px;
@@ -439,28 +757,29 @@ body {
     margin-right: auto;
 }
 
+/* Estilo para los encabezados */
 h1,
-/*ESTO CAMBIA EL COLOR DE LOS TITULOS DE COMENTARIOS*/
 h2 {
     margin-bottom: 20px;
-    color: #ffffff; /* Color azul para los encabezados */
+    color: #ffffff; /* Color de los encabezados */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 h1 {
-    font-size: 3.5em; /* Tamaño más grande para el título principal */
+    font-size: 3.5em; /* Tamaño grande para el título principal */
     text-align: center;
     margin-bottom: 40px;
     font-weight: 700; /* Negrita */
 }
 
 h2 {
-    font-size: 2.5em; /* Tamaño más grande para subtítulos */
-    border-bottom: 3px solid #fd0101; /* Borde azul */
+    font-size: 2.5em; /* Tamaño grande para los subtítulos */
+    border-bottom: 3px solid #fd0101; /* Borde rojo */
     padding-bottom: 10px;
     margin-top: 40px;
 }
 
+/* Estilo para el párrafo de los elementos */
 .item p {
     color: #def674 !important; /* Forzar que el color verde se aplique */
     font-size: 16px;
@@ -471,6 +790,7 @@ h2 {
     font-weight: 700;
 }
 
+/* Estilo para las tarjetas */
 .card {
     background-color: #ecf0f1; /* Color gris claro para las tarjetas */
     border-radius: 10px;
@@ -485,11 +805,12 @@ h2 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Estilo para los botones */
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #2980b9; /* Color de botón azul */
-    color: #ffffff; /* Color de texto blanco en el botón */
+    background-color: #2980b9; /* Color azul */
+    color: #ffffff; /* Color de texto blanco */
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -497,10 +818,97 @@ h2 {
 }
 
 .btn:hover {
-    background-color: #27ae60; /* Cambiar color de fondo del botón en hover */
-    color: #ffffff; /* Mantener el texto blanco */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra al hacer hover */
+    background-color: #27ae60; /* Cambio de color al hacer hover */
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* Media Queries para hacerlo responsivo */
+
+/* Pantallas medianas (tabletas, pantallas de 768px a 1024px) */
+@media (max-width: 1024px) {
+    .content {
+        padding: 20px; /* Menos padding en pantallas pequeñas */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Título más pequeño */
+    }
+
+    h2 {
+        font-size: 2em; /* Subtítulo más pequeño */
+    }
+
+    .item p {
+        font-size: 1em; /* Tamaño de texto más pequeño */
+    }
+
+    .card {
+        padding: 15px; /* Menos padding en las tarjetas */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Botón más pequeño */
+        font-size: 14px; /* Texto más pequeño */
+    }
+}
+
+/* Pantallas pequeñas (teléfonos móviles, pantallas de 480px a 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Título aún más pequeño */
+    }
+
+    h2 {
+        font-size: 1.6em; /* Subtítulo más pequeño */
+    }
+
+    .content {
+        padding: 15px; /* Menos padding */
+    }
+
+    .item p {
+        font-size: 0.9em; /* Texto más pequeño */
+    }
+
+    .card {
+        padding: 10px; /* Menos padding en las tarjetas */
+    }
+
+    .btn {
+        padding: 6px 12px; /* Botón aún más pequeño */
+        font-size: 12px; /* Texto del botón más pequeño */
+    }
+}
+
+/* Pantallas extra pequeñas (dispositivos muy pequeños como teléfonos móviles, pantallas de menos de 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Título muy pequeño */
+    }
+
+    h2 {
+        font-size: 1.4em; /* Subtítulo ajustado */
+    }
+
+    .content {
+        padding: 10px; /* Muy poco padding */
+    }
+
+    .item p {
+        font-size: 0.85em; /* Texto más pequeño */
+    }
+
+    .card {
+        padding: 5px; /* Aún menos padding */
+    }
+
+    .btn {
+        padding: 5px 10px; /* Botón pequeño */
+        font-size: 11px; /* Texto más pequeño */
+    }
+}
+
 
 /* Estilo adicional para el footer */
 footer {
@@ -604,88 +1012,42 @@ footer p {
 .image-slider .controls button:hover {
     background-color: rgba(255, 255, 255, 1); /* Color de fondo blanco al pasar el mouse */
 }
-@media (max-width: 728px) {
-    .navbar {
-        flex-direction: row; /* Mantener el diseño en fila */
-        align-items: center; /* Centrar verticalmente */
-        padding: 10px; /* Espaciado reducido */
-        overflow-x: auto; /* Permitir desplazamiento horizontal */
-        white-space: nowrap; /* Evitar que las opciones se envuelvan en múltiples líneas */
-    }
 
-    .navbar ul {
-        flex-direction: row; /* Mantener en fila */
-        width: auto; /* Ancho automático */
-    }
 
-    .navbar ul li {
-        margin-left: 10px; /* Espaciado entre elementos */
-        margin-bottom: 0; /* Eliminar margen inferior */
-    }
-
-    .navbar ul li a {
-        padding: 10px 15px; /* Espaciado normal */
-        font-size: 16px; /* Tamaño de fuente normal */
-    }
-
-    .content {
-        padding: 20px; /* Espaciado reducido */
-        margin-top: 80px; /* Ajustar margen superior para que no tape las imágenes */
-    }
-
-    h1 {
-        font-size: 2.5em; /* Tamaño más pequeño para títulos */
-    }
-
-    h2 {
-        font-size: 2em; /* Tamaño más pequeño para subtítulos */
-    }
-
-    .products-table {
-        font-size: 0.9em; /* Tamaño de fuente más pequeño en la tabla */
-    }
-
-    .products-table th,
-    .products-table td {
-        padding: 10px; /* Espaciado reducido en celdas */
-    }
-
-    /* Ajustar el tamaño de las imágenes */
-    .image-grid img {
-        width: 100%; /* Ancho completo en móviles */
-        height: auto; /* Altura automática */
-    }
-}
-
-/*NAVEGACION INFERIOR*/
-footer{
-    background: linear-gradient(to left, #c20701, #7600ca);
+/* NAVEGACION INFERIOR */
+footer {
+    background: linear-gradient(135deg, #da3b2d, #7710c1);  
     padding: 30px 0 10px 0;
     text-align: center;
     position: relative;
     width: 100%;
 }
 
-footer .redes{
+/* Ajustes de los íconos de redes sociales */
+footer .redes {
     margin-bottom: 20px;
     color: #000;
+    display: flex;
+    justify-content: center; /* Centrar los íconos de redes sociales */
+    flex-wrap: wrap; /* Permite que los íconos se ajusten a la siguiente línea si es necesario */
 }
 
-footer .redes a{
+footer .redes a {
     color: #000;
     display: inline-block;
     text-decoration: none;
     border: 0px solid #000000;
-    border-radius: 250%;
+    border-radius: 50%;
     width: 42px;
     height: 42px;
     line-height: 42px;
-    margin: 40px 5px;
+    margin: 10px; /* Espaciado reducido entre los íconos */
     font-size: 20px;
     transition: .3s;
 }
 
-footer .arriba{
+/* Ajustes del botón de volver arriba */
+footer .arriba {
     display: block;
     width: 50px;
     height: 50px;
@@ -700,35 +1062,61 @@ footer .arriba{
     font-size: 18px;
 }
 
-/* Cambiar el color de las letras */
-
-.item p {
-    color: #2ce2dc6d; /* Verde */
-}
-
-
-/* Cambiar el color y tamaño solo para el icono de WhatsApp */
+/* Ajustes para el ícono de WhatsApp */
 .redes a i.fa-whatsapp {
-    color: #ffffff; /* Color verde */
-    font-size: 40px; /* Tamaño más grande */
+    color: #ffffff;
+    font-size: 40px;
 }
 
-/* Cambiar el color cuando el icono de WhatsApp es hovered */
+/* Cambiar el color al pasar el mouse sobre el ícono de WhatsApp */
 .redes a i.fa-whatsapp:hover {
-    color: #ffffff; /* Color cuando se pasa el mouse */
+    color: #ffffff;
 }
 
+/* Ajustes para el ícono de YouTube */
 .redes a i.fa-youtube {
-    color: #ffffff; /* Color verde */
-    font-size: 40px; /* Tamaño más grande */
+    color: #ffffff;
+    font-size: 40px;
 }
 
-/* Cambiar el color cuando el icono de WhatsApp es hovered */
-.redes a i.fa-youtube :hover {
-    color: #faf7f7  ; /* Color cuando se pasa el mouse */
+/* Cambiar el color al pasar el mouse sobre el ícono de YouTube */
+.redes a i.fa-youtube:hover {
+    color: #faf7f7;
 }
 
-/* Cambiar el color cuando el icono de WhatsApp es hovered */
+/* Estilos responsivos */
+@media (max-width: 728px) {
+    /* Ajustar el pie de página (footer) */
+    footer {
+        padding: 20px 0; /* Espaciado reducido */
+    }
+
+    /* Ajustar el comportamiento de las redes sociales */
+    footer .redes {
+        flex-direction: row; /* En pantallas pequeñas, se alinean en fila */
+        justify-content: center; /* Centrar los íconos */
+    }
+
+    footer .redes a {
+        width: 35px; /* Reducir tamaño de los íconos */
+        height: 35px;
+        line-height: 35px;
+        font-size: 18px; /* Reducir tamaño de fuente */
+    }
+
+    /* Ajustar el botón de volver arriba */
+    footer .arriba {
+        width: 40px; /* Reducir tamaño del botón */
+        height: 40px;
+        font-size: 16px;
+    }
+
+    /* Ajustar el tamaño de los textos dentro de los elementos */
+    .item p {
+        font-size: 14px; /* Reducir tamaño de texto */
+        color: #2ce2dc6d;
+    }
+}
 
 
 /* Cambiar el color cuando el icono de WhatsApp es hovered */

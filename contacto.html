@@ -8,116 +8,88 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     
     <style>
-        
-        .contact-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .big-logo {
-    width: 400px; /* Ajusta el tamaño según sea necesario */
-    animation: float 2s infinite; /* Aplica la animación de forma infinita */
+    /* Estilos generales */
+.contact-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
 }
 
+.big-logo {
+    width: 400px;
+    animation: float 2s infinite;
+}
+
+/* Animación del logo */
 @keyframes float {
     0%, 100% {
-        transform: translateY(0); /* Comienza en la posición original */
+        transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* Flota hacia arriba */
+        transform: translateY(-10px);
     }
 }
-        .contact-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: left;
-            margin-top: 20px;
-        }
 
-        .blog-features {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: left;
-            margin-top: 20px;
-        }
+.contact-card,
+.blog-features {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: left;
+    margin-top: 20px;
+}
 
-        .contact-card h2, .blog-features h2 {
-            margin-bottom: 20px;
-            color: #346ead;
-            text-align: center;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .feature-item {
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #fff;
-            transition: transform 0.3s ease;
-            text-align: center;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-item h3 {
-            color: #a833da;
-            margin-bottom: 10px;
-        }
-
-.social-links h2 {
-    color: #007bff;
+.contact-card h2, .blog-features h2 {
     margin-bottom: 20px;
+    color: #346ead;
+    text-align: center;
 }
 
+/* Grid de características */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    color: #a833da;
+    margin-bottom: 10px;
+}
+
+/* Iconos de redes sociales */
 i.fa-whatsapp {
-    color: #25D366; /* Color verde */
-    font-size: 40px; /* Tamaño más grande */
-}
-
-/* Cambiar el color cuando el icono de WhatsApp es hovered */
-i.fa-whatsapp:hover {
-    color: #128C7E; /* Color cuando se pasa el mouse */
+    color: #25D366;
+    font-size: 40px;
 }
 
 i.fa-youtube {
-    color: #d50b0b; /* Color verde */
-    font-size: 40px; /* Tamaño más grande */
+    color: #d50b0b;
+    font-size: 40px;
 }
 
-/* Cambiar el color cuando el icono de WhatsApp es hovered */
-i.fa-youtube :hover {
-    color: #d50b0b  ; /* Color cuando se pasa el mouse */
-}
 i.fa-twitter {
-    color: #0b95d5; /* Color verde */
-    font-size: 40px; /* Tamaño más grande */
+    color: #0b95d5;
+    font-size: 40px;
 }
 
-/* Cambiar el color cuando el icono de WhatsApp es hovered */
-i.fa-twitter :hover {
-    color: #0b95d5  ; /* Color cuando se pasa el mouse */
-}
-i.fa-facebook-f {
-    color: #01354d; /* Color verde */
-    font-size: 40px; /* Tamaño más grande */
-}
-     
-
-/* Especificidad para la sección de fundadores */
+/* Sección de fundadores */
 .founders-section {
     text-align: center;
     padding: 40px 20px;
@@ -126,11 +98,10 @@ i.fa-facebook-f {
 
 .founders-section h2 {
     font-size: 2em;
-    color: #0071c5; /* Cambia este código de color al que desees */
+    color: #0071c5;
     margin-bottom: 20px;
     font-weight: bold;
 }
-
 
 .founders-section .features-grid {
     display: flex;
@@ -178,50 +149,138 @@ i.fa-facebook-f {
     margin: 0;
 }
 
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    /* Ajustes generales */
+    .contact-container {
+        padding: 15px;
+    }
+
+    .big-logo {
+        width: 300px;
+    }
+
+    /* Reducción de padding en las tarjetas */
+    .contact-card, .blog-features {
+        padding: 20px;
+    }
+
+    /* Ajustar el grid para una mejor visualización en pantallas más pequeñas */
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .founders-section .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .founders-section .feature-item {
+        width: 90%;
+    }
+
+    .founders-section h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustes para pantallas muy pequeñas (móviles) */
+    .big-logo {
+        width: 250px;
+    }
+
+    .contact-card, .blog-features {
+        padding: 15px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item {
+        padding: 15px;
+    }
+
+    .founders-section .feature-item {
+        width: 80%;
+    }
+
+    .founders-section h2 {
+        font-size: 1.5em;
+    }
+
+    .feature-item h3 {
+        font-size: 1.1em;
+    }
+
+    .feature-item p {
+        font-size: 0.9em;
+    }
+}
+
+
     </style>
 </head>
 <body>
+   
     <section id="navegacion" class="navegacion">
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">
-                    <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731462103/2_qyazdq.png" alt="Logo de Tienda de PC">
+                <a href="index.html" class="logo-texto">
+                    InnovaCompuTech
                 </a>
+                    
             </div>
             <div class="nombrelogo">
             </div>
-            <ul>
-                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>  <!-- funcional -->
-                <li><a style="font-size: 25px; font-weight: 700;"  href="novedades.html"><i>Novedades</i></a></li>
+            <!-- Menú principal -->
+            <ul class="menu">
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="novedades.html"><i>Novedades</i></a></li>
                 <li>
-                    <a style="font-size: 25px; font-weight: 700;"  href="welcometop.html"><i>Ranking</i></a>
+                    <a style="font-size: 25px; font-weight: 700;" href="welcometop.html"><i>Ranking</i></a>
                     <div class="dropdown-content">
                         <div class="submenu">
-                            <a style="font-size: 25px; font-weight: 700;"  href="#">Procesadores</a>
+                            <a style="font-size: 25px; font-weight: 700;" href="#">Procesadores</a>
                             <div class="submenu-content">
-                                <a style="font-size: 25px; font-weight: 700;"  href="topintel.html">Intel</a>
-                                <a  style="font-size: 25px; font-weight: 700;"  href="topamd.html">AMD</a>
+                                <a style="font-size: 25px; font-weight: 700;" href="topintel.html">Intel</a>
+                                <a style="font-size: 25px; font-weight: 700;" href="topamd.html">AMD</a>
                             </div>
                         </div>
                         <div class="submenu">
-                            <a style="font-size: 25px; font-weight: 700;"href="#">Tarjetas Gráficas</a>
+                            <a style="font-size: 25px; font-weight: 700;" href="#">Tarjetas Gráficas</a>
                             <div class="submenu-content">
-                                <a style="font-size: 25px; font-weight: 700;"  href="topnvidia.html">NVIDIA</a>
-                                <a style="font-size: 25px; font-weight: 700;"  href="topradeon.html">RADEON</a>
+                                <a style="font-size: 25px; font-weight: 700;" href="topnvidia.html">NVIDIA</a>
+                                <a style="font-size: 25px; font-weight: 700;" href="topradeon.html">RADEON</a>
                             </div>
                         </div>
                         <div class="submenu">
-                            <a style="font-size: 25px; font-weight: 700;"  href="#">Laptops</a>
+                            <a style="font-size: 25px; font-weight: 700;" href="#">Laptops</a>
                             <div class="submenu-content">
                                 <a style="font-size: 25px; font-weight: 700;" href="toplaptopgamer.html">Gamers</a>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li><a style="font-size: 25px; font-weight: 700;"  href="armapc.html"><i>Arma tu pc</i></a></li>
-                <li><a style="font-size: 25px; font-weight: 700;"   href="contacto.html"><i>Contacto</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="contacto.html"><i>Contacto</i></a></li>
             </ul>
+            
+            <!-- Botón hamburguesa -->
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
         </nav>
+    
+        <!-- Menú desplegable en móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="welcometop.html">Ranking</a></li>
+                <li><a href="armapc.html">Arma tu pc</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
     </section>
     <div class="content">
         <div class="contact-container">

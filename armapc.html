@@ -14,45 +14,62 @@
     <section id="navegacion" class="navegacion">
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html">
-                    <img src="https://res.cloudinary.com/dh3vrki7m/image/upload/v1731462103/2_qyazdq.png" alt="Logo de Tienda de PC">
+                <a href="index.html" class="logo-texto">
+                    InnovaCompuTech
                 </a>
+                    
             </div>
             <div class="nombrelogo">
             </div>
-            <ul>
-                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>  <!-- funcional -->
-                <li><a style="font-size: 25px; font-weight: 700;"  href="novedades.html"><i>Novedades</i></a></li>
+            <!-- Menú principal -->
+            <ul class="menu">
+                <li><a style="font-size: 25px; font-weight: 700;" href="index.html"><i>Inicio</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="novedades.html"><i>Novedades</i></a></li>
                 <li>
-                    <a style="font-size: 25px; font-weight: 700;"  href="welcometop.html"><i>Ranking</i></a>
+                    <a style="font-size: 25px; font-weight: 700;" href="welcometop.html"><i>Ranking</i></a>
                     <div class="dropdown-content">
                         <div class="submenu">
-                            <a style="font-size: 25px; font-weight: 700;"  href="#">Procesadores</a>
+                            <a style="font-size: 25px; font-weight: 700;" href="#">Procesadores</a>
                             <div class="submenu-content">
-                                <a style="font-size: 25px; font-weight: 700;"  href="topintel.html">Intel</a>
-                                <a  style="font-size: 25px; font-weight: 700;"  href="topamd.html">AMD</a>
+                                <a style="font-size: 25px; font-weight: 700;" href="topintel.html">Intel</a>
+                                <a style="font-size: 25px; font-weight: 700;" href="topamd.html">AMD</a>
                             </div>
                         </div>
                         <div class="submenu">
-                            <a style="font-size: 25px; font-weight: 700;"href="#">Tarjetas Gráficas</a>
+                            <a style="font-size: 25px; font-weight: 700;" href="#">Tarjetas Gráficas</a>
                             <div class="submenu-content">
-                                <a style="font-size: 25px; font-weight: 700;"  href="topnvidia.html">NVIDIA</a>
-                                <a style="font-size: 25px; font-weight: 700;"  href="topradeon.html">RADEON</a>
+                                <a style="font-size: 25px; font-weight: 700;" href="topnvidia.html">NVIDIA</a>
+                                <a style="font-size: 25px; font-weight: 700;" href="topradeon.html">RADEON</a>
                             </div>
                         </div>
                         <div class="submenu">
-                            <a style="font-size: 25px; font-weight: 700;"  href="#">Laptops</a>
+                            <a style="font-size: 25px; font-weight: 700;" href="#">Laptops</a>
                             <div class="submenu-content">
                                 <a style="font-size: 25px; font-weight: 700;" href="toplaptopgamer.html">Gamers</a>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li><a style="font-size: 25px; font-weight: 700;"  href="armapc.html"><i>Arma tu pc</i></a></li>
-                <li><a style="font-size: 25px; font-weight: 700;"   href="contacto.html"><i>Contacto</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="armapc.html"><i>Arma tu pc</i></a></li>
+                <li><a style="font-size: 25px; font-weight: 700;" href="contacto.html"><i>Contacto</i></a></li>
             </ul>
+            
+            <!-- Botón hamburguesa -->
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
         </nav>
+    
+        <!-- Menú desplegable en móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="welcometop.html">Ranking</a></li>
+                <li><a href="armapc.html">Arma tu pc</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
     </section>
+    
     
 
     <div class="content">
@@ -139,6 +156,41 @@
             document.getElementById("pc-config-form").reset();
             document.getElementById("precio-total").textContent = "";
         }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    // Comprobar el tamaño de la pantalla al cargar la página
+    if (window.innerWidth <= 768) {
+        // Asegurarse de que el botón hamburguesa sea visible en pantallas pequeñas
+        hamburger.style.display = 'block';
+        mobileMenu.style.display = 'block';  // Mostrar el menú móvil
+    } else {
+        // En pantallas grandes, no mostrar el menú móvil ni el botón hamburguesa
+        hamburger.style.display = 'none';
+        mobileMenu.style.display = 'none';
+    }
+
+    // Alternar la visibilidad del menú móvil al hacer clic en el botón hamburguesa
+    hamburger.addEventListener('click', function() {
+        mobileMenu.classList.toggle('open'); // Abrir o cerrar el menú
+        document.body.classList.toggle('menu-open'); // Asegurar que el contenido no se desplace
+    });
+
+    // Actualizar el menú si el tamaño de la ventana cambia
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            hamburger.style.display = 'none';
+            mobileMenu.style.display = 'none'; // Ocultar menú en pantallas grandes
+        } else {
+            hamburger.style.display = 'block';
+            mobileMenu.style.display = 'block';  // Mostrar menú móvil en pantallas pequeñas
+        }
+    });
+});
+
+
     </script>
 </body>
 <footer>
