@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="cssprinci.css"> 
     <link rel="stylesheet" href="cssformulario.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
 </head>
 <body>
     <section id="navegacion" class="navegacion">
@@ -55,22 +59,22 @@
         <h1>Contacto</h1>
         <p>Si tienes dudas, sugerencias o necesitas más información sobre tecnología de PC, completa el formulario y recibirás una respuesta en el menor tiempo posible.</p>
         
-        <form id="contact-form" method="POST" onsubmit="mostrarConfirmacion(event)">
+        <form id="contact-form" method="POST" onsubmit="mostrarConfirmacion(event)"onsubmit>
             <label for="nombre">Nombres:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tus nombres" required>
-
+            
             <label for="apellidop">Apellido Paterno:</label>
             <input type="text" id="apellidop" name="apellidop" placeholder="Apellido paterno" required>
-
+            
             <label for="apellidom">Apellido Materno:</label>
             <input type="text" id="apellidom" name="apellidom" placeholder="Apellido materno" required>
-
+            
             <label for="correo">Correo Electrónico:</label>
             <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required>
-
+            
             <label for="telefono">Teléfono:</label>
             <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono">
-
+            
             <label for="tipo_consulta">Selecciona el Tipo de Consulta:</label>
             <select id="tipo_consulta" name="tipo_consulta" required>
                 <option value="" disabled selected>Selecciona una opción</option>
@@ -79,11 +83,13 @@
                 <option value="sugerencia">Sugerencia</option>
                 <option value="otro">Otro</option>
             </select>
-
+            
             <label for="mensaje">Mensaje:</label>
             <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje" rows="6" required></textarea>
-
-            <button type="submit" action="guardar_consulta.php">Enviar Mensaje</button>
+            
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+        
         </form>
     </div>
     
@@ -138,6 +144,38 @@
             });
         }
         </script>
-        
+         <script>
+            (function() {
+                // Inicializar EmailJS con tu Public Key
+                emailjs.init("I5NVhgde2QRkfIxht");
+    
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+    
+                    // Preparar los datos del formulario
+                    const templateParams = {
+                        nombre: document.getElementById('nombre').value,
+                        apellidop: document.getElementById('apellidop').value,
+                        apellidom: document.getElementById('apellidom').value,
+                        correo: document.getElementById('correo').value,
+                        telefono: document.getElementById('telefono').value,
+                        tipo_consulta: document.getElementById('tipo_consulta').value,
+                        mensaje: document.getElementById('mensaje').value
+                    };
+    
+                    // Enviar el email usando EmailJS
+                    emailjs.send('service_lq2bkgo', 'template_mosduuc', templateParams)
+                        .then(function(response) {
+                            console.log('SUCCESS!', response.status, response.text);
+                            document.getElementById('mensaje-exito').style.display = 'block';
+                            document.getElementById('contact-form').reset();
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                            alert('Error al enviar el mensaje. Por favor, intenta nuevamente.');
+                        });
+                });
+            })();
+            
+        </script>
 </body>
 </html>
